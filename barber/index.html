@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blade &amp; Co. Barbershop</title>
+<meta name="description" content="Classic cuts, fades, and beard work. Book your chair at Blade &amp; Co.">
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blade & Co. Barbershop">
+<meta property="og:description" content="Classic cuts, fades, and beard work. Book your chair at Blade & Co.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Blade & Co. Barbershop","description":"Classic cuts, fades, and beard work. Book your chair at Blade & Co.","address":{"@type":"PostalAddress","streetAddress":"12 Main Street","addressLocality":"Your Town"},"telephone":"000 000 000","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:00"}]}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💈</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--ink:#15130f;--mut:#6b655a;--card:#fff;--line:#ddd7c9;--ac:#9a7b12;--acfg:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--ink:#f3ecd6;--mut:#a39c88;--card:#151515;--line:#2a2a2a;--ac:#d4af37;--acfg:#111;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b0b0b;--ink:#f3ecd6;--mut:#a39c88;--card:#151515;--line:#2a2a2a;--ac:#d4af37;--acfg:#111;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0;line-height:1.05}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.top{background:#0f0f0f;color:#f3ecd6}
+.nav{display:flex;justify-content:space-between;align-items:center;height:66px}
+.logo{font:700 22px Oswald,sans-serif;letter-spacing:.08em;color:#d4af37;text-decoration:none}
+.nav nav{display:flex;gap:22px;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.nav nav a{color:#cfc7b0;text-decoration:none}
+.hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:60px 0 84px}
+h1{font-size:clamp(46px,9vw,92px);color:#f3ecd6}
+h1 em{font-style:normal;color:#d4af37}
+.lead{color:#b9b19a;max-width:34ch;margin:18px 0 30px;font-size:19px}
+.btn{display:inline-block;padding:14px 28px;font:600 15px Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:2px solid #d4af37}
+.btn.p{background:#d4af37;color:#111}
+.btn.s{color:#d4af37;margin-left:10px}
+.pole{width:54px;height:230px;border-radius:27px;border:3px solid #d4af37;background:repeating-linear-gradient(-45deg,#d4af37 0 14px,#0f0f0f 14px 28px,#f3ecd6 28px 42px,#0f0f0f 42px 56px)}
+section{padding:70px 0}
+h2{font-size:clamp(32px,5vw,48px);margin-bottom:8px}
+h2::after{content:"";display:block;width:56px;height:4px;background:var(--ac);margin-top:12px}
+.sub{color:var(--mut);margin:14px 0 34px;max-width:46ch}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 56px}
+.item{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px solid var(--line)}
+.item b{font:500 20px Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.item i{flex:1;border-bottom:1px dotted var(--mut);transform:translateY(-4px)}
+.item span{font:700 20px Oswald,sans-serif;color:var(--ac)}
+.item small{display:block;color:var(--mut);font-size:14px;font-weight:400;text-transform:none}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.t{aspect-ratio:1;border-radius:4px;display:flex;align-items:flex-end;padding:14px;font:500 15px Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#f3ecd6}
+.t:nth-child(1){background:linear-gradient(160deg,#3b3326,#0f0f0f)}
+.t:nth-child(2){background:linear-gradient(160deg,#6b5a1c,#1a1608)}
+.t:nth-child(3){background:linear-gradient(160deg,#2a2a2a,#050505)}
+.t:nth-child(4){background:linear-gradient(160deg,#4a3b12,#0f0f0f)}
+.t:nth-child(5){background:linear-gradient(160deg,#1f1f1f,#3b3326)}
+.t:nth-child(6){background:linear-gradient(160deg,#5c4a16,#111)}
+.hint{color:var(--mut);font-size:14px;margin-top:12px}
+.visit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.box{background:var(--card);border:1px solid var(--line);padding:28px}
+.box h3{font-size:22px;margin-bottom:14px;color:var(--ac)}
+.hrs{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;margin:0}
+.hrs dt{color:var(--mut)}.hrs dd{margin:0;text-align:right;font-weight:500}
+.box p{margin:0 0 8px}
+.cta{background:#0f0f0f;color:#f3ecd6;text-align:center;padding:64px 22px}
+.cta h2::after{margin:12px auto 0}
+.cta p{color:#b9b19a;margin:14px 0 26px}
+footer{padding:26px 0;text-align:center;color:var(--mut);font-size:13px}
+.lang{display:flex;gap:2px;border:1px solid rgba(128,128,128,.45);border-radius:99px;padding:2px;flex:none;--lg:#d4af37;--lgfg:#111}
+.lang button{background:none;border:0;color:inherit;font:700 12px 'DM Sans',system-ui,sans-serif;letter-spacing:.06em;padding:6px 10px;border-radius:99px;cursor:pointer;opacity:.75}
+.lang button[aria-pressed=true]{opacity:1;background:var(--lg,var(--ac));color:var(--lgfg,var(--acfg))}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+@media (max-width:640px){.pole{display:none}.hero{grid-template-columns:1fr}.nav nav a:not(.k){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <div class="nav"><a class="logo" href="#">BLADE &amp; CO.</a><nav><a href="#services">Services</a><a href="#gallery">Gallery</a><a class="k" href="#visit">Visit</a></nav><div class="lang" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">EN</button><button data-l="pl" aria-pressed="false">PL</button><button data-l="vi" aria-pressed="false">VI</button></div></div>
+  <div class="hero">
+    <div>
+      <h1>Sharp cuts.<br><em>Clean lines.</em></h1>
+      <p class="lead">Classic barbering, modern fades, and beard work done right. Walk in sharp, walk out sharper.</p>
+      <a class="btn p" href="#visit">Book now</a><a class="btn s" href="#services">See prices</a>
+    </div>
+    <div class="pole" aria-hidden="true"></div>
+  </div>
+</div></div>
 
+<main>
+<section id="services"><div class="wrap">
+  <h2>Services &amp; prices</h2>
+  <p class="sub">Every cut includes a hot towel finish and a styling chat.</p>
+  <div class="menu">
+    <div>
+      <div class="item"><b>Haircut</b><i></i><span>$25</span></div>
+      <div class="item"><b>Skin fade</b><i></i><span>$30</span></div>
+      <div class="item"><b>Kids cut <small>Under 12</small></b><i></i><span>$18</span></div>
+    </div>
+    <div>
+      <div class="item"><b>Beard trim</b><i></i><span>$15</span></div>
+      <div class="item"><b>Cut + beard</b><i></i><span>$40</span></div>
+      <div class="item"><b>Hot towel shave</b><i></i><span>$30</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="gallery" style="padding-top:0"><div class="wrap">
+  <h2>The work</h2>
+  <p class="sub">A look at what’s coming out of the chairs.</p>
+  <div class="gal">
+    <div class="t">Skin fade</div><div class="t">Classic taper</div><div class="t">Beard sculpt</div>
+    <div class="t">Crew cut</div><div class="t">Line up</div><div class="t">Hot towel shave</div>
+  </div>
+  <p class="hint">Sample layout. Your own photos go here.</p>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap">
+  <h2>Visit us</h2>
+  <p class="sub">Walk-ins welcome. Booking guarantees your chair.</p>
+  <div class="visit">
+    <div class="box"><h3>Opening hours</h3>
+      <dl class="hrs"><dt>Mon to Fri</dt><dd>9:00 to 19:00</dd><dt>Saturday</dt><dd>9:00 to 17:00</dd><dt>Sunday</dt><dd>Closed</dd></dl></div>
+    <div class="box"><h3>Find us</h3>
+      <p>12 Main Street<br>Your Town</p><p>Phone: 000 000 000</p><p>Instagram: @bladeandco</p></div>
+  </div>
+</div></section>
+
+<div class="cta"><h2>Ready for a fresh cut?</h2><p>Book your chair online in under a minute.</p><a class="btn p" href="#visit">Book now</a></div>
+</main>
+<footer><a href="../" style="color:inherit">Concept design by Quask Studio</a></footer>
+<script>
+(function(){var D={'Classic cuts, fades, and beard work. Book your chair at Blade & Co.':['Klasyczne strzyżenie, fade i pielęgnacja brody. Zarezerwuj fotel w Blade & Co.','Cắt tóc cổ điển, fade và chăm sóc râu. Đặt chỗ tại Blade & Co.'],'Services':['Usługi','Dịch vụ'],'Gallery':['Galeria','Thư viện ảnh'],'Visit':['Odwiedź nas','Ghé thăm'],'Sharp cuts.':['Ostre cięcia.','Đường cắt sắc nét.'],'Clean lines.':['Czyste linie.','Gọn gàng, rõ nét.'],'Classic barbering, modern fades, and beard work done right. Walk in sharp, walk out sharper.':['Klasyczne barberstwo, nowoczesne fade i pielęgnacja brody zrobiona jak trzeba. Wejdź w dobrej formie, wyjdź w jeszcze lepszej.','Barber cổ điển, fade hiện đại và chăm sóc râu chuẩn từng chi tiết. Bước vào gọn gàng, bước ra còn bảnh hơn.'],'Book now':['Zarezerwuj','Đặt lịch ngay'],'See prices':['Zobacz cennik','Xem bảng giá'],'Services & prices':['Usługi i cennik','Dịch vụ và bảng giá'],'Every cut includes a hot towel finish and a styling chat.':['Każde strzyżenie kończy się gorącym ręcznikiem i krótką rozmową o stylizacji.','Mỗi kiểu cắt đều kết thúc với khăn nóng và tư vấn tạo kiểu.'],'Haircut':['Strzyżenie','Cắt tóc'],'Skin fade':['Skin fade','Skin fade'],'Kids cut':['Strzyżenie dziecięce','Cắt tóc trẻ em'],'Under 12':['Do 12 lat','Dưới 12 tuổi'],'Beard trim':['Przycinanie brody','Tỉa râu'],'Cut + beard':['Strzyżenie + broda','Cắt tóc + râu'],'Hot towel shave':['Golenie na gorąco','Cạo râu khăn nóng'],'The work':['Nasze prace','Tác phẩm'],'A look at what’s coming out of the chairs.':['Zerknij, co wychodzi z naszych foteli.','Một vài kiểu tóc vừa ra khỏi ghế của chúng tôi.'],'Classic taper':['Klasyczny taper','Taper cổ điển'],'Beard sculpt':['Rzeźbienie brody','Tạo kiểu râu'],'Sample layout. Your own photos go here.':['Przykładowy układ. Tutaj trafią Twoje zdjęcia.','Bố cục mẫu. Ảnh của bạn sẽ ở đây.'],'Visit us':['Odwiedź nas','Ghé thăm chúng tôi'],'Walk-ins welcome. Booking guarantees your chair.':['Zapraszamy bez rezerwacji. Rezerwacja gwarantuje Twój fotel.','Chào đón khách vãng lai. Đặt lịch đảm bảo chỗ của bạn.'],'Opening hours':['Godziny otwarcia','Giờ mở cửa'],'Mon to Fri':['Pon. do pt.','Thứ Hai đến Thứ Sáu'],'9:00 to 19:00':['9:00 do 19:00','9:00 đến 19:00'],'Saturday':['Sobota','Thứ Bảy'],'9:00 to 17:00':['9:00 do 17:00','9:00 đến 17:00'],'Sunday':['Niedziela','Chủ nhật'],'Closed':['Zamknięte','Đóng cửa'],'Find us':['Jak nas znaleźć','Tìm chúng tôi'],'12 Main Street':['ul. Główna 12','12 Phố Chính'],'Your Town':['Twoje miasto','Thị trấn của bạn'],'Phone: 000 000 000':['Telefon: 000 000 000','Điện thoại: 000 000 000'],'Ready for a fresh cut?':['Czas na świeże cięcie?','Sẵn sàng cho kiểu tóc mới?'],'Book your chair online in under a minute.':['Zarezerwuj fotel online w mniej niż minutę.','Đặt chỗ trực tuyến trong chưa đầy một phút.'],'Concept design by Quask Studio':['Projekt koncepcyjny: Quask Studio','Thiết kế ý tưởng bởi Quask Studio']};var L='en',N=[];try{L=localStorage.getItem('lang')||'en'}catch(e){}if(!/^(en|pl|vi)$/.test(L))L='en';var W=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode.nodeName;return(p==='SCRIPT'||p==='STYLE'||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),n;while(n=W.nextNode())N.push([n,n.nodeValue]);var T0=document.title,M=document.querySelector('meta[name=description]'),M0=M?M.content:'';function tr(s,i){var k=s.trim(),v=D[k];return v&&v[i]?s.replace(k,function(){return v[i]}):s}function ap(l){var i=l==='pl'?0:1,en=l==='en';N.forEach(function(p){p[0].nodeValue=en?p[1]:tr(p[1],i)});document.title=en?T0:tr(T0,i);if(M)M.content=en?M0:tr(M0,i);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});try{localStorage.setItem('lang',l)}catch(e){}}document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){ap(b.dataset.l)}});ap(L)})();
+</script>
+</body>
+</html>
