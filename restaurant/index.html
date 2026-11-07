@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ember &amp; Olive | Wood-fired restaurant</title>
+<meta name="description" content="Wood-fired dishes, seasonal ingredients, and shared plates. Reserve a table at Ember &amp; Olive.">
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ember & Olive | Wood-fired restaurant">
+<meta property="og:description" content="Wood-fired dishes, seasonal ingredients, and shared plates. Reserve a table at Ember & Olive.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Ember & Olive","description":"Wood-fired dishes, seasonal ingredients, and shared plates.","servesCuisine":"Wood-fired, seasonal","acceptsReservations":true,"address":{"@type":"PostalAddress","streetAddress":"21 Orchard Street","addressLocality":"Your Town"},"telephone":"000 000 000","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"20:00"}]}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ec;--ink:#1d2a22;--mut:#667068;--card:#fff;--line:#dcd8cc;--ac:#b3541e;--acfg:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a14;--ink:#eef0e6;--mut:#a3b0a4;--card:#16241b;--line:#263629;--ac:#f2a65a;--acfg:#1d1208;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a14;--ink:#eef0e6;--mut:#a3b0a4;--card:#16241b;--line:#263629;--ac:#f2a65a;--acfg:#1d1208;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;margin:0;line-height:1.08}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.top{background:#10231a;color:#f1efe3;position:relative;overflow:hidden}
+.top::before{content:"";position:absolute;width:520px;height:520px;right:-140px;bottom:-220px;background:radial-gradient(circle,rgba(242,166,90,.35),transparent 65%)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:68px;position:relative}
+.logo{font:italic 500 24px Fraunces,Georgia,serif;color:#f2a65a;text-decoration:none}
+.nav nav{display:flex;gap:24px;font-size:15px}
+.nav nav a{color:#c9d2c6;text-decoration:none}
+.hero{padding:70px 0 96px;position:relative}
+.eyebrow{color:#f2a65a;letter-spacing:.2em;font-size:13px;font-weight:700;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(46px,8.5vw,88px);max-width:12ch}
+h1 em{color:#f2a65a}
+.lead{color:#b9c6b8;font-size:19px;max-width:38ch;margin:20px 0 30px}
+.btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px}
+.btn.p{background:#f2a65a;color:#1d1208}
+.btn.s{border:1.5px solid #f2a65a;color:#f2a65a;margin-left:8px}
+section{padding:70px 0}
+h2{font-size:clamp(34px,5vw,50px);margin-bottom:10px}
+.sub{color:var(--mut);margin:0 0 40px;max-width:46ch}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.menu h3{font-size:24px;color:var(--ac);padding-bottom:12px;border-bottom:2px solid var(--ac);margin-bottom:6px;font-style:italic}
+.dish{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.dish b{font-weight:700;display:block}
+.dish span{color:var(--mut);font-size:15px}
+.dish i{font:600 18px Fraunces,serif;font-style:normal;color:var(--ink)}
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:170px 170px;gap:12px}
+.t{border-radius:10px;display:flex;align-items:flex-end;padding:14px;font:italic 500 18px Fraunces,serif;color:#f6efe0}
+.t:nth-child(1){grid-row:span 2;background:linear-gradient(160deg,#b3541e,#3a1c0d)}
+.t:nth-child(2){background:linear-gradient(160deg,#4a6b3a,#14261a)}
+.t:nth-child(3){background:linear-gradient(160deg,#d98a3a,#7a3b12)}
+.t:nth-child(4){background:linear-gradient(160deg,#2f4a3a,#0f1a14)}
+.t:nth-child(5){background:linear-gradient(160deg,#c45f2a,#4a1f0c)}
+.hint{color:var(--mut);font-size:14px;margin-top:12px}
+.visit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:30px}
+.box h3{font-size:26px;margin-bottom:14px;color:var(--ac)}
+.hrs{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin:0}
+.hrs dt{color:var(--mut)}.hrs dd{margin:0;text-align:right;font-weight:500}
+.box p{margin:0 0 8px}
+.cta{background:#10231a;color:#f1efe3;text-align:center;padding:66px 22px}
+.cta p{color:#b9c6b8;margin:12px 0 26px}
+footer{padding:26px 0;text-align:center;color:var(--mut);font-size:13px}
+.lang{display:flex;gap:2px;border:1px solid rgba(128,128,128,.45);border-radius:99px;padding:2px;flex:none;--lg:#f2a65a;--lgfg:#1d1208}
+.lang button{background:none;border:0;color:inherit;font:700 12px 'DM Sans',system-ui,sans-serif;letter-spacing:.06em;padding:6px 10px;border-radius:99px;cursor:pointer;opacity:.75}
+.lang button[aria-pressed=true]{opacity:1;background:var(--lg,var(--ac));color:var(--lgfg,var(--acfg))}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+@media (max-width:640px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}.t{min-height:130px}.t:nth-child(1){grid-column:span 2;grid-row:auto}.nav nav a:not(.k){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <div class="nav"><a class="logo" href="#">Ember &amp; Olive</a><nav><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a class="k" href="#visit">Visit</a></nav><div class="lang" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">EN</button><button data-l="pl" aria-pressed="false">PL</button><button data-l="vi" aria-pressed="false">VI</button></div></div>
+  <div class="hero">
+    <div class="eyebrow">Wood-fired kitchen</div>
+    <h1>Fire, olive oil, <em>good company.</em></h1>
+    <p class="lead">Seasonal dishes cooked over open flame and made for sharing. Come hungry.</p>
+    <a class="btn p" href="#visit">Reserve a table</a><a class="btn s" href="#menu">See the menu</a>
+  </div>
+</div></div>
+
+<main>
+<section id="menu"><div class="wrap">
+  <h2>The menu</h2>
+  <p class="sub">Small plates to share, then something from the fire. The menu changes with the seasons.</p>
+  <div class="menu">
+    <div><h3>To start</h3>
+      <div class="dish"><div><b>Charred flatbread</b><span>Whipped feta, olive oil, thyme</span></div><i>$8</i></div>
+      <div class="dish"><div><b>Roasted tomato soup</b><span>Basil oil, toasted sourdough</span></div><i>$9</i></div>
+      <div class="dish"><div><b>Grilled halloumi</b><span>Honey, chili, lemon</span></div><i>$11</i></div></div>
+    <div><h3>From the fire</h3>
+      <div class="dish"><div><b>Wood-fired chicken</b><span>Garlic, rosemary, roast potatoes</span></div><i>$22</i></div>
+      <div class="dish"><div><b>Slow lamb shoulder</b><span>Olive tapenade, white beans</span></div><i>$28</i></div>
+      <div class="dish"><div><b>Smoked mushroom pasta</b><span>Parmesan, hazelnut, parsley</span></div><i>$19</i></div></div>
+    <div><h3>To finish</h3>
+      <div class="dish"><div><b>Olive oil cake</b><span>Orange, mascarpone</span></div><i>$9</i></div>
+      <div class="dish"><div><b>Dark chocolate pot</b><span>Sea salt, cherries</span></div><i>$9</i></div>
+      <div class="dish"><div><b>Seasonal sorbet</b><span>Ask your server</span></div><i>$7</i></div></div>
+  </div>
+</div></section>
+
+<section id="gallery" style="padding-top:0"><div class="wrap">
+  <h2>From the kitchen</h2>
+  <p class="sub">A taste of what’s coming out of the fire.</p>
+  <div class="gal">
+    <div class="t">The wood oven</div><div class="t">Fresh herbs</div><div class="t">Lamb shoulder</div><div class="t">Dining room</div><div class="t">Olive oil cake</div>
+  </div>
+  <p class="hint">Sample layout. Your own photos go here.</p>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap">
+  <h2>Visit us</h2>
+  <p class="sub">Book ahead on weekends. Walk-ins welcome at the bar.</p>
+  <div class="visit">
+    <div class="box"><h3>Opening hours</h3>
+      <dl class="hrs"><dt>Tue to Thu</dt><dd>17:00 to 22:00</dd><dt>Fri and Sat</dt><dd>12:00 to 23:00</dd><dt>Sunday</dt><dd>12:00 to 20:00</dd><dt>Monday</dt><dd>Closed</dd></dl></div>
+    <div class="box"><h3>Find us</h3>
+      <p>21 Orchard Street<br>Your Town</p><p>Phone: 000 000 000</p><p>Instagram: @emberandolive</p></div>
+  </div>
+</div></section>
+
+<div class="cta"><h2>Save your table</h2><p>Reserve online in under a minute.</p><a class="btn p" href="#visit">Reserve a table</a></div>
+</main>
+<footer><a href="../" style="color:inherit">Concept design by Quask Studio</a></footer>
+<script>
+(function(){var D={'Ember & Olive | Wood-fired restaurant':['Ember & Olive | Restauracja z piecem opalanym drewnem','Ember & Olive | Nhà hàng nướng củi'],'Wood-fired dishes, seasonal ingredients, and shared plates. Reserve a table at Ember & Olive.':['Dania z pieca opalanego drewnem, sezonowe składniki i dania do dzielenia się. Zarezerwuj stolik w Ember & Olive.','Món nướng củi, nguyên liệu theo mùa và các món chia sẻ. Đặt bàn tại Ember & Olive.'],'Menu':['Menu','Thực đơn'],'Gallery':['Galeria','Thư viện ảnh'],'Visit':['Odwiedź nas','Ghé thăm'],'Wood-fired kitchen':['Kuchnia z pieca na drewno','Bếp nướng củi'],'Fire, olive oil,':['Ogień, oliwa,','Lửa, dầu ô liu,'],'good company.':['dobre towarzystwo.','bạn bè thân thiết.'],'Seasonal dishes cooked over open flame and made for sharing. Come hungry.':['Sezonowe dania z otwartego ognia, stworzone do dzielenia się. Przychodźcie z apetytem.','Món theo mùa nấu trên lửa than, dành để chia sẻ. Hãy đến với cái bụng đói.'],'Reserve a table':['Zarezerwuj stolik','Đặt bàn'],'See the menu':['Zobacz menu','Xem thực đơn'],'The menu':['Menu','Thực đơn'],'Small plates to share, then something from the fire. The menu changes with the seasons.':['Małe dania do dzielenia się, a potem coś z ognia. Menu zmienia się wraz z porami roku.','Các món nhỏ để chia sẻ, sau đó là món từ lửa than. Thực đơn thay đổi theo mùa.'],'To start':['Na początek','Khai vị'],'Charred flatbread':['Przypieczony chlebek płaski','Bánh mì dẹt nướng'],'Whipped feta, olive oil, thyme':['Ubita feta, oliwa, tymianek','Phô mai feta đánh bông, dầu ô liu, húng tây'],'Roasted tomato soup':['Zupa z pieczonych pomidorów','Súp cà chua nướng'],'Basil oil, toasted sourdough':['Olej bazyliowy, opiekany chleb na zakwasie','Dầu húng quế, bánh mì sourdough nướng'],'Grilled halloumi':['Grillowany halloumi','Phô mai halloumi nướng'],'Honey, chili, lemon':['Miód, chili, cytryna','Mật ong, ớt, chanh'],'From the fire':['Z ognia','Từ bếp lửa'],'Wood-fired chicken':['Kurczak z pieca na drewno','Gà nướng củi'],'Garlic, rosemary, roast potatoes':['Czosnek, rozmaryn, pieczone ziemniaki','Tỏi, hương thảo, khoai tây nướng'],'Slow lamb shoulder':['Powoli pieczona łopatka jęgnięca','Vai cừu nướng chậm'],'Olive tapenade, white beans':['Tapenada z oliwek, biała fasola','Sốt ô liu tapenade, đậu trắng'],'Smoked mushroom pasta':['Makaron z wędzonymi grzybami','Mì Ý nấm hun khói'],'Parmesan, hazelnut, parsley':['Parmezan, orzech laskowy, pietruszka','Phô mai parmesan, hạt phỉ, rau mùi tây'],'To finish':['Na zakończenie','Tráng miệng'],'Olive oil cake':['Ciasto na oliwie','Bánh dầu ô liu'],'Orange, mascarpone':['Pomarańcza, mascarpone','Cam, mascarpone'],'Dark chocolate pot':['Ciemna czekolada w kubeczku','Chocolate đen dạng pudding'],'Sea salt, cherries':['Sól morska, wiśnie','Muối biển, cherry'],'Seasonal sorbet':['Sorbet sezonowy','Kem sorbet theo mùa'],'Ask your server':['Zapytaj kelnera','Hãy hỏi nhân viên phục vụ'],'From the kitchen':['Z naszej kuchni','Từ căn bếp'],'A taste of what’s coming out of the fire.':['Smak tego, co wychodzi z ognia.','Hương vị từ bếp lửa của chúng tôi.'],'The wood oven':['Piec opalany drewnem','Lò nướng củi'],'Fresh herbs':['Świeże zioła','Rau thơm tươi'],'Lamb shoulder':['Łopatka jęgnięca','Vai cừu'],'Dining room':['Sala','Phòng ăn'],'Sample layout. Your own photos go here.':['Przykładowy układ. Tutaj trafią Twoje zdjęcia.','Bố cục mẫu. Ảnh của bạn sẽ ở đây.'],'Visit us':['Odwiedź nas','Ghé thăm chúng tôi'],'Book ahead on weekends. Walk-ins welcome at the bar.':['W weekendy rezerwuj z wyprzedzeniem. Przy barze zapraszamy bez rezerwacji.','Cuối tuần nên đặt trước. Quầy bar chào đón khách vãng lai.'],'Opening hours':['Godziny otwarcia','Giờ mở cửa'],'Tue to Thu':['Wt. do czw.','Thứ Ba đến Thứ Năm'],'17:00 to 22:00':['17:00 do 22:00','17:00 đến 22:00'],'Fri and Sat':['Pt. i sob.','Thứ Sáu và Thứ Bảy'],'12:00 to 23:00':['12:00 do 23:00','12:00 đến 23:00'],'Sunday':['Niedziela','Chủ nhật'],'12:00 to 20:00':['12:00 do 20:00','12:00 đến 20:00'],'Monday':['Poniedziałek','Thứ Hai'],'Closed':['Zamknięte','Đóng cửa'],'Find us':['Jak nas znaleźć','Tìm chúng tôi'],'21 Orchard Street':['ul. Sadowa 21','21 Phố Vườn Cây'],'Your Town':['Twoje miasto','Thị trấn của bạn'],'Phone: 000 000 000':['Telefon: 000 000 000','Điện thoại: 000 000 000'],'Save your table':['Zarezerwuj swój stolik','Giữ bàn của bạn'],'Reserve online in under a minute.':['Zarezerwuj online w mniej niż minutę.','Đặt bàn trực tuyến trong chưa đầy một phút.'],'Concept design by Quask Studio':['Projekt koncepcyjny: Quask Studio','Thiết kế ý tưởng bởi Quask Studio']};var L='en',N=[];try{L=localStorage.getItem('lang')||'en'}catch(e){}if(!/^(en|pl|vi)$/.test(L))L='en';var W=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode.nodeName;return(p==='SCRIPT'||p==='STYLE'||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),n;while(n=W.nextNode())N.push([n,n.nodeValue]);var T0=document.title,M=document.querySelector('meta[name=description]'),M0=M?M.content:'';function tr(s,i){var k=s.trim(),v=D[k];return v&&v[i]?s.replace(k,function(){return v[i]}):s}function ap(l){var i=l==='pl'?0:1,en=l==='en';N.forEach(function(p){p[0].nodeValue=en?p[1]:tr(p[1],i)});document.title=en?T0:tr(T0,i);if(M)M.content=en?M0:tr(M0,i);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});try{localStorage.setItem('lang',l)}catch(e){}}document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){ap(b.dataset.l)}});ap(L)})();
+</script>
+</body>
+</html>
 
