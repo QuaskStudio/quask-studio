@@ -1,1 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Short-Form Edits Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1e1f21; --ink:#dddcf0; --muted:#a9a8bd; --line:#3d3e43; --dark:#17171a;
+  --c1:#dddcf0; --c2:#c5c3f7; --c3:#a09cdc; --c4:#8782cd; --c5:#7f79c8;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(16px,2.6vw,40px)}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
+/* Headline */
+h1{
+  font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-weight:400;text-transform:uppercase;
+  margin:0;padding-top:clamp(12px,2vw,28px);line-height:.92;letter-spacing:-.02em;
+  font-size:11.5vw;color:var(--ink);
+}
+h1 svg{display:inline-block;width:.62em;height:.62em;margin-left:.12em;vertical-align:baseline}
+@media (min-width:800px){h1{font-size:min(7.3vw,108px)}}
+.rule{border:0;border-top:1px solid var(--line);margin:clamp(24px,3.5vw,48px) 0 clamp(24px,3.5vw,44px)}
+
+/* Info row */
+.info{display:grid;grid-template-columns:1fr;gap:28px;margin-bottom:clamp(28px,4vw,52px)}
+@media (min-width:800px){.info{grid-template-columns:1fr 1.7fr 1fr}.info>:last-child{justify-self:end}}
+h2{margin:0 0 10px;font-size:18px;font-weight:700;letter-spacing:0;text-transform:uppercase}
+.info p,.info li,.info a{font-size:13px;color:var(--ink);margin:0;line-height:1.55;text-decoration:none}
+.info a:hover{text-decoration:underline}
+.info ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+
+/* Tiles */
+.tiles{display:flex;gap:8px;height:clamp(340px,40vw,540px);margin-bottom:clamp(48px,7vw,96px)}
+.tile{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;
+  min-width:0;padding:10px 12px;border:1px solid transparent;border-radius:6px;
+  font:600 13px/1.3 Inter,system-ui,sans-serif;text-align:left;color:var(--dark);
+  background:var(--c2);cursor:default;transition:filter .15s,transform .25s ease;
+}
+button.tile{cursor:pointer}
+button.tile:hover{filter:brightness(1.08)}
+button.tile[aria-pressed="true"]{outline:2px solid #fff;outline-offset:2px}
+.tile em{font-style:normal;font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-weight:400;font-size:clamp(2rem,5vw,5rem);line-height:1;letter-spacing:-.02em}
+.tile svg.go{width:26px;height:26px;display:block}
+.t1{flex:0 0 clamp(72px,6.6vw,94px);background:var(--c1)}
+.t2{flex:3.5 1 0}
+.t3{flex:2.4 1 0}
+.t4{flex:1 1 0;background:var(--c3)}
+.t9{flex:1 1 0;background:#aeaae4}
+.t2,.t3,.t4,.t9{transform:rotate(0deg);transform-origin:bottom center}
+.t2:hover,.t3:hover,.t4:hover,.t9:hover,.t2:focus-visible,.t3:focus-visible,.t4:focus-visible,.t9:focus-visible{transform:rotate(-2deg)}
+.t5{flex:.75 1 0;background:var(--c4)}
+.t6{flex:.8 1 0;background:var(--c5)}
+.t7,.t8{background:transparent;color:var(--ink);border-color:#c9c8d8}
+.t7{flex:1.3 1 0}.t8{flex:2 1 0}
+.badge{align-self:flex-end;display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#55566a;color:#fff;font:700 13px/1 Inter,sans-serif}
+@media (max-width:799px){
+  .tiles{display:grid;grid-template-columns:1fr 1fr;height:auto}
+  .tile{min-height:132px;transform:none!important}
+  .t1{grid-column:1/-1;min-height:84px;flex-direction:row;align-items:center}
+}
+
+/* Gallery */
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:16px}
+.sec-head h2{margin:0;font-size:clamp(1.4rem,3vw,2.2rem);font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-weight:400;letter-spacing:-.01em}
+#count{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:10px}
+.card{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:9/16;
+  padding:12px;border-radius:6px;text-decoration:none;overflow:hidden;
+  background:linear-gradient(160deg,var(--a),var(--b));color:var(--t);
+  border:1px solid rgba(255,255,255,.12);transition:transform .2s;
+}
+.card:hover{transform:translateY(-4px)}
+.card .top{display:flex;justify-content:space-between;font-size:12px;font-weight:600}
+.card .play{align-self:center;width:56px;height:56px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center}
+.card .play svg{width:20px;height:20px;margin-left:3px}
+.card h3{margin:0 0 2px;font-size:15px;line-height:1.25;font-weight:700}
+.card p{margin:0;font-size:12px;opacity:.8}
+.card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.card.has-clip::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.75))}
+.card .top,.card .play,.card .meta{position:relative;z-index:2}
+.card .play{transition:opacity .2s}
+.card.has-clip .top,.card.has-clip .meta{text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.card.playing .play{opacity:0}
+.empty{grid-column:1/-1;color:var(--muted);font-size:14px;padding:24px 0}
+
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:clamp(56px,8vw,110px);padding:20px 0 28px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){.card,.tile{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Short-form edits work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" aria-hidden="true"><path d="M4 4l16 16M20 8v12H8"/></svg></h1>
+  <hr class="rule">
+
+  <!-- Replace the placeholder text below with your own details -->
+  <section class="info" aria-label="About and contact">
+    <div>
+      <h2>About</h2>
+      <p>Karol Vu</p>
+      <p>Social Media Creator</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p><a href="mailto:karolvu2@gmail.com">karolvu2@gmail.com</a></p>
+      <p><a href="" target="" rel="noopener">+48 739 481 623</a></p>
+      <p><a href="" target="" rel="noopener">+48 513 760 867</a></p>
+    </div>
+  </section>
+
+  <div class="tiles" role="group" aria-label="Filter edits by platform">
+    <button class="tile t1" type="button" data-filter="all" aria-pressed="true">
+      <span>All<br>Edits</span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+    </button>
+    <button class="tile t2" type="button" data-filter="TikTok" aria-pressed="false"><span>TikTok<br>edits</span><em data-count="TikTok">0</em></button>
+    <button class="tile t3" type="button" data-filter="Reels" aria-pressed="false"><span>Instagram<br>Reels</span><em data-count="Reels">0</em></button>
+    <button class="tile t4" type="button" data-filter="Shorts" aria-pressed="false"><span>YouTube<br>Shorts</span><em data-count="Shorts">0</em></button>
+    <button class="tile t9" type="button" data-filter="Facebook" aria-pressed="false"><span>Facebook<br>Reels</span><em data-count="Facebook">0</em></button>
+    <div class="tile t5"><span>Food<br>Content</span></div>
+    <div class="tile t6"><span>Barbers<br>Nails</span></div>
+    <div class="tile t7"><span>CapCut</span><span class="badge" aria-hidden="true">Cc</span></div>
+    <div class="tile t8"><span>Adobe<br>Premiere Pro</span><span class="badge" aria-hidden="true">Pr</span></div>
+  </div>
+
+  <main id="work">
+    <div class="sec-head"><h2 id="heading">All edits</h2><span id="count" aria-live="polite"></span></div>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer>
+    <span>© 2026 Karol Vu</span>
+    <a href="#top" id="top-link">Back to top</a>
+  </footer>
+</div>
+
+<script>
+/* ==========================================================================
+   >>>  YOUR VIDEOS GO HERE  <<<
+   One line per video in the list below.
+
+   title     the name shown on the card
+   platform  exactly "TikTok", "Reels" (Instagram), "Shorts" or "Facebook"
+   views     text shown on the card, e.g. "1.2M views"
+   year      e.g. "2026"
+   url       link to the real video, opens when someone clicks the card
+             (leave "" if you do not have one yet)
+   clip      the short preview that plays on hover.
+             Put the video file in the "videos" folder next to this file,
+             then write its path here, e.g.  clip:"videos/my-edit.mp4"
+             (leave "" for no preview). Best clips: vertical MP4, H.264,
+             5 to 15 seconds, under 20 MB.
+
+   To add a video, copy a whole line, paste it below, and change the values.
+   ========================================================================== */
+var EDITS = [
+  {title:"Meo Barber", platform:"TikTok", views:"795K views", year:"2025", url:"https://www.tiktok.com/@meo.barber.warszawa/video/7527268857644354838", clip:"videos/hook-teaser.mp4"},
+  {title:"Wonders Of Asia", platform:"Reels", views:"68.8K views", year:"2025", url:"https://www.instagram.com/reel/DLXoDiosnqX/?cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==", clip:"videos/hotpot.mp4"},
+  {title:"AMV", platform:"Shorts", views:"2K views", year:"2024", url:"https://www.youtube.com/shorts/PQHLBUhZFnQ", clip:"videos/AMV.mp4"},
+  {title:"Meo Barber", platform:"TikTok", views:"50.4K views", year:"2025", url:"https://www.tiktok.com/@meo.barber.warszawa/video/7515426247451741462", clip:"videos/pierwszy.mp4"},
+  {title:"Wonders Of Asia", platform:"Reels", views:"49.7K views", year:"2025", url:"https://www.instagram.com/reel/DLeyLbSsdX7/?dlrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==", clip:"videos/flashback.mp4"},
+  {title:"Edgerunners AMV", platform:"Shorts", views:"2K views", year:"2024", url:"https://www.youtube.com/shorts/ZU7WKZ7mL70", clip:"videos/AMV2.mp4"},
+  {title:"EcoRide Polska", platform:"TikTok", views:"19.9K views", year:"2025", url:"https://www.tiktok.com/@ecoride.polska/video/7529147586825997590", clip:"videos/karol.mp4"},
+  {title:"Wonders Of Asia", platform:"Reels", views:"10.9K views", year:"2025", url:"https://www.instagram.com/reel/DLPa76us_TC/?obrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==", clip:"videos/durian.mp4"},
+  {title:"Gaming Videos", platform:"TikTok", views:"867 views", year:"2024", url:"https://www.tiktok.com/@bumpy4444/video/7692041809047899414", clip:"videos/apex.mp4"},
+  {title:"Bar sajgon Kozienice", platform:"Facebook", views:"137 likes", year:"2025", url:"https://www.facebook.com/reel/2170694563416624", clip:"videos/facebook.mp4"},
+  {title:"Diamond Nails", platform:"Reels", views:"13.1K views", year:"2025", url:"https://www.instagram.com/reel/DLVm6-EMrtR/?srtk=MzRlODBiNWFlZA==", clip:"videos/nails.mp4"},
+  {title:"Meo Barber", platform:"Facebook", views:"21 likes", year:"2025", url:"https://www.facebook.com/reel/728253019617889", clip:"videos/snoop.mp4"}
+];
+
+var TINTS = [
+  ["#c5c3f7","#9f9bdb","#17171a"],
+  ["#dddcf0","#b4b1ea","#17171a"],
+  ["#a09cdc","#8d88d3","#17171a"],
+  ["#7f79c8","#403c86","#ffffff"]
+];
+
+var grid = document.getElementById("grid");
+var heading = document.getElementById("heading");
+var countEl = document.getElementById("count");
+var tiles = document.querySelectorAll("button.tile");
+var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var LABELS = {all:"All edits", TikTok:"TikTok edits", Reels:"Instagram Reels", Shorts:"YouTube Shorts", Facebook:"Facebook Reels"};
+
+function el(tag, cls, text){
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined) n.textContent = text;
+  return n;
+}
+
+var touchOnly = !!(window.matchMedia && window.matchMedia("(hover: none)").matches);
+
+function playClip(card, v){
+  var p = v.play();
+  if (p && p.catch) p.catch(function(){});
+  card.classList.add("playing");
+}
+function stopClip(card, v){
+  v.pause();
+  try { v.currentTime = 0; } catch (x) {}
+  card.classList.remove("playing");
+}
+
+/* On touch screens there is no hover, so clips play while a card is mostly on screen */
+var io = null;
+if (touchOnly && !reduce && "IntersectionObserver" in window){
+  io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target.querySelector("video");
+      if (!v) return;
+      if (en.isIntersecting) playClip(en.target, v); else stopClip(en.target, v);
+    });
+  }, {threshold:0.6});
+}
+
+function attachClip(a, src, t){
+  var v = document.createElement("video");
+  v.muted = true; v.loop = true; v.playsInline = true; v.preload = "metadata";
+  v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
+  v.addEventListener("loadedmetadata", function(){
+    a.classList.add("has-clip");
+    a.style.setProperty("--t", "#ffffff");
+  });
+  v.addEventListener("error", function(){
+    v.remove();
+    a.classList.remove("has-clip", "playing");
+    a.style.setProperty("--t", t[2]);
+  });
+  v.src = src.indexOf("#") === -1 ? src + "#t=0.001" : src;
+  a.insertBefore(v, a.firstChild);
+  a.addEventListener("mouseenter", function(){ playClip(a, v); });
+  a.addEventListener("mouseleave", function(){ stopClip(a, v); });
+  a.addEventListener("focus", function(){ playClip(a, v); });
+  a.addEventListener("blur", function(){ stopClip(a, v); });
+  if (io) io.observe(a);
+}
+
+function render(filter){
+  if (io) io.disconnect();
+  grid.replaceChildren();
+  var list = EDITS.filter(function(e){ return filter === "all" || e.platform === filter; });
+  heading.textContent = LABELS[filter] || LABELS.all;
+  countEl.textContent = list.length + (list.length === 1 ? " edit" : " edits");
+  if (!list.length){
+    grid.appendChild(el("p", "empty", "No edits here yet. Add one to the EDITS list."));
+    return;
+  }
+  list.forEach(function(e, i){
+    var t = TINTS[i % TINTS.length];
+    var a = el("a", "card");
+    a.href = e.url || "#";
+    if (e.url){ a.target = "_blank"; a.rel = "noopener"; }
+    else { a.addEventListener("click", function(ev){ ev.preventDefault(); }); }
+    a.style.setProperty("--a", t[0]);
+    a.style.setProperty("--b", t[1]);
+    a.style.setProperty("--t", t[2]);
+    a.setAttribute("aria-label", e.title + ", " + e.platform);
+
+    var top = el("div", "top");
+    top.appendChild(el("span", "", e.platform));
+    top.appendChild(el("span", "", e.year));
+
+    var play = el("div", "play");
+    play.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>';
+
+    var meta = el("div", "meta");
+    meta.appendChild(el("h3", "", e.title));
+    meta.appendChild(el("p", "", e.views));
+
+    if (e.clip) attachClip(a, e.clip, t);
+    a.appendChild(top); a.appendChild(play); a.appendChild(meta);
+    grid.appendChild(a);
+  });
+}
+
+/* Fill the counts on the tiles */
+document.querySelectorAll("[data-count]").forEach(function(n){
+  var p = n.getAttribute("data-count");
+  n.textContent = EDITS.filter(function(e){ return e.platform === p; }).length;
+});
+
+tiles.forEach(function(b){
+  b.addEventListener("click", function(){
+    tiles.forEach(function(o){ o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+    var f = b.getAttribute("data-filter");
+    render(f);
+    document.getElementById("work").scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"start"});
+  });
+});
+
+document.getElementById("top-link").addEventListener("click", function(ev){
+  ev.preventDefault();
+  window.scrollTo({top:0, behavior: reduce ? "auto" : "smooth"});
+});
+
+render("all");
+</script>
+</body>
+</html>
