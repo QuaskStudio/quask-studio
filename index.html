@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quask Studio</title>
+<title>Quask Studio | Websites, videos and ads for local businesses</title>
 <meta name="description" content="Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -11,81 +11,121 @@
 <meta property="og:description" content="Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Quask Studio","description":"Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.","email":"quaskstudiohq@gmail.com","serviceType":["Website design","Short-form video editing","Advertising"]}</script>
 <link rel="icon" href="favicon.ico" sizes="any">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f5fc;--ink:#17132a;--mut:#645e7d;--card:#fff;--line:#e4dff2;--ac:#6b4df0;--acfg:#fff;--glow:rgba(107,77,240,.2);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b15;--ink:#f2effb;--mut:#a29cbd;--card:#161324;--line:#2a2540;--ac:#b9a8ff;--acfg:#17132a;--glow:rgba(185,168,255,.22);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0d0b15;--ink:#f2effb;--mut:#a29cbd;--card:#161324;--line:#2a2540;--ac:#b9a8ff;--acfg:#17132a;--glow:rgba(185,168,255,.22);color-scheme:dark}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+:root{--w:#fff;--k:#0b0a10;--p:#6d35f2;--p2:#b99bff;--g:#55526a;--line:rgba(11,10,16,.1);--soft:#f6f5fa;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
-h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em;margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font:700 20px "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
-.logo span{color:var(--ac)}
-nav{display:flex;gap:22px;font-size:15px}
-nav a{color:var(--mut);text-decoration:none}
-nav a:hover{color:var(--ink)}
-.hero{position:relative;padding:90px 0 70px;overflow:hidden}
-.hero::before{content:"";position:absolute;width:560px;height:560px;right:-160px;top:-120px;background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
-.eyebrow{color:var(--ac);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
-h1{font-size:clamp(40px,8vw,76px);max-width:14ch}
-.lead{color:var(--mut);font-size:clamp(18px,2.4vw,21px);max-width:46ch;margin:22px 0 32px}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--w);color:var(--k);font:400 17px/1.65 "Inter",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(255,255,255,.7);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:10}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.05;letter-spacing:-.03em;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px;position:relative}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid rgba(11,10,16,.08)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:14px}
+.logo{font:700 20px "Space Grotesk",sans-serif;color:var(--k);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--p)}
+nav{display:flex;align-items:center;gap:26px;font:500 15px "Inter",sans-serif}
+nav a{color:var(--g);text-decoration:none}
+nav a:hover{color:var(--k)}
+nav a.keep{background:var(--p);color:#fff;padding:9px 20px;border-radius:99px}
+nav a.keep:hover{background:#5a24d9;color:#fff}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:rgba(255,255,255,.55);flex:none}
+.lang button{background:transparent;border:0;color:var(--g);font:500 12px "JetBrains Mono",monospace;padding:7px 11px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--k);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--k);color:#fff;padding:96px 0}
+.hero::before{content:"";position:absolute;width:560px;height:560px;left:-140px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(123,60,255,.6),transparent 65%);filter:blur(18px)}
+.hero::after{content:"";position:absolute;width:480px;height:480px;right:-120px;bottom:-210px;border-radius:50%;background:radial-gradient(circle,rgba(185,155,255,.42),transparent 65%);filter:blur(18px)}
+.hero .wrap{z-index:1}
+.glass{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:28px;padding:clamp(28px,5vw,60px)}
+.eyebrow{color:#d9d4ea;font:500 14px "Inter",sans-serif;margin-bottom:22px}
+.eyebrow::before{content:"";display:inline-block;width:26px;height:2px;background:var(--p2);vertical-align:middle;margin-right:12px}
+h1{font-size:clamp(40px,7.4vw,80px);max-width:14ch;font-weight:700}
+.lead{color:#d9d4ea;font-size:clamp(18px,2.2vw,21px);max-width:46ch;margin:24px 0 36px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;border-radius:99px;font-weight:700;text-decoration:none;font-size:16px}
-.btn.p{background:var(--ac);color:var(--acfg)}
-.btn.s{border:1.5px solid var(--line);color:var(--ink)}
-section{padding:64px 0}
-h2{font-size:clamp(30px,5vw,44px);margin-bottom:12px}
-.sub{color:var(--mut);max-width:52ch;margin:0 0 36px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
-.card h3{font-size:22px;margin-bottom:8px}
-.card p{margin:0;color:var(--mut)}
-.num{font:700 14px "Bricolage Grotesque",sans-serif;color:var(--ac);margin-bottom:14px;display:block}
-.mock{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;display:flex;flex-direction:column}
-.bar{display:flex;gap:5px;padding:9px 12px;background:rgba(128,128,128,.2)}
-.bar i{width:8px;height:8px;border-radius:50%;background:rgba(128,128,128,.55)}
-.scr{flex:1;padding:18px 20px;display:flex;flex-direction:column;gap:9px;justify-content:center}
-.scr small{font-size:11px;letter-spacing:.2em;font-weight:700}
-.scr b{font:700 24px/1.1 "Bricolage Grotesque",sans-serif}
-.mb{display:inline-block;align-self:flex-start;padding:7px 15px;border-radius:99px;font-size:12px;font-weight:700}
-.tiles{display:flex;gap:6px;margin-top:6px}
-.tiles u{flex:1;height:34px;border-radius:6px}
-.barber{background:#111;color:#f3e9c8}.barber small{color:#d4af37}.barber .mb{background:#d4af37;color:#111}.barber u{background:rgba(255,255,255,.12)}
-.nails{background:#fdeef1;color:#4a2631}.nails small{color:#c2577a}.nails b{font:italic 600 26px/1.1 Georgia,serif}.nails .mb{background:#c2577a;color:#fff}.nails u{background:rgba(194,87,122,.2)}
-.rest{background:#10231a;color:#f1efe3}.rest small{color:#f2a65a}.rest b{font:italic 600 24px/1.1 Georgia,serif}.rest .mb{background:#f2a65a;color:#1d1208}.rest u{background:rgba(255,255,255,.12)}
+.btn{display:inline-block;padding:14px 28px;border-radius:99px;font:600 15px "Inter",sans-serif;text-decoration:none;border:1px solid transparent;transition:background .15s,transform .15s}
+.btn.p{background:var(--p);color:#fff}
+.btn.p:hover{background:#5a24d9;transform:translateY(-1px)}
+.btn.s{border-color:rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.08)}
+.btn.s:hover{background:#fff;color:var(--k)}
+section{padding:96px 0;position:relative;overflow:hidden}
+#services,#pricing{background:linear-gradient(180deg,#fff,#f7f3ff)}
+#services::before,#pricing::before{content:"";position:absolute;top:-120px;right:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(109,53,242,.16),transparent 65%)}
+h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:14px}
+.sub{color:var(--g);max-width:52ch;margin:0 0 46px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:rgba(255,255,255,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(109,53,242,.14);border-radius:22px;padding:32px;box-shadow:0 10px 30px rgba(11,10,16,.05);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(11,10,16,.09)}
+.num{display:block;color:var(--p);font:600 14px "Inter",sans-serif;margin-bottom:18px}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{margin:0;color:var(--g)}
 #work .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 #work .grid>div{position:relative}
-.stretch{display:block;margin-top:8px;color:var(--ac);font-weight:700;font-size:15px;text-decoration:none}
-.stretch::after{content:"";position:absolute;inset:0}
-.vid{background:linear-gradient(135deg,#2b1d63,#7a5cff 60%,#ffb8d9);color:#fff;align-items:center;justify-content:center;position:relative;text-align:center}
-.vid .pl{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;backdrop-filter:blur(4px)}
-.vid .tag{position:absolute;bottom:14px;font-size:12px;font-weight:700;letter-spacing:.06em;background:rgba(0,0,0,.35);padding:5px 12px;border-radius:99px}
-.vid .tag.t{top:14px;bottom:auto}
-.cap{padding:14px 2px 0}
-.cap b{display:block;font-size:18px}
-.cap span{color:var(--mut);font-size:14px}
-.price{font:700 38px "Bricolage Grotesque",sans-serif;margin:6px 0 14px}
-.price small{font:400 15px "DM Sans",sans-serif;color:var(--mut)}
-ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;color:var(--mut)}
-li::before{content:"✓";color:var(--ac);font-weight:700;margin-right:10px}
-.note{color:var(--mut);font-size:15px;margin-top:22px}
-.cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:64px 22px;position:relative;overflow:hidden}
-.cta::before{content:"";position:absolute;inset:-40% 10% auto;height:260px;background:radial-gradient(ellipse,var(--glow),transparent 70%);pointer-events:none}
-.cta>*{position:relative}
-.cta p{color:var(--mut);margin:12px auto 28px;max-width:40ch}
-footer{padding:36px 0 46px;color:var(--mut);font-size:14px;text-align:center}
-.lang{display:flex;gap:2px;border:1px solid rgba(128,128,128,.45);border-radius:99px;padding:2px;flex:none}
-.lang button{background:none;border:0;color:inherit;font:700 12px 'DM Sans',system-ui,sans-serif;letter-spacing:.06em;padding:6px 10px;border-radius:99px;cursor:pointer;opacity:.75}
-.lang button[aria-pressed=true]{opacity:1;background:var(--lg,var(--ac));color:var(--lgfg,var(--acfg))}
-:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.mock{border:1px solid var(--line);border-radius:18px;aspect-ratio:4/3;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 10px 30px rgba(11,10,16,.06)}
+.bar{display:flex;gap:5px;padding:9px 12px;border-bottom:1px solid rgba(128,128,128,.3)}
+.bar i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.4}
+.scr{flex:1;padding:16px 18px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.scr small{font:600 10px "Inter",sans-serif;letter-spacing:.16em}
+.scr b{font:700 22px/1.05 "Space Grotesk",sans-serif;letter-spacing:-.02em}
+.mb{display:inline-block;align-self:flex-start;padding:6px 14px;border-radius:99px;font:600 11px "Inter",sans-serif}
+.tiles{display:flex;gap:6px;margin-top:6px}
+.tiles u{flex:1;height:30px;border-radius:8px}
+.barber{background:var(--k);color:#fff}.barber small{color:var(--p2)}.barber .mb{background:var(--p);color:#fff}.barber u{background:rgba(255,255,255,.12)}
+.nails{background:#fff;color:var(--k)}.nails small{color:var(--g)}.nails .mb{background:var(--k);color:#fff}.nails u{background:var(--soft)}
+.rest{background:#efe9ff;color:var(--k)}.rest small{color:var(--g)}.rest .mb{background:var(--p);color:#fff}.rest u{background:rgba(255,255,255,.7)}
+.vid{background:linear-gradient(135deg,#0b0a10 50%,#5a2ed0);color:#fff;align-items:center;justify-content:center;position:relative;text-align:center}
+.vid .pl{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center}
+.vid .tag{position:absolute;bottom:12px;font:600 10px "Inter",sans-serif;letter-spacing:.08em;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:5px 12px;border-radius:99px}
+.vid .tag.t{top:12px;bottom:auto}
+.cap{padding:16px 2px 0}
+.cap b{display:block;font:700 20px "Space Grotesk",sans-serif;letter-spacing:-.01em}
+.cap span{display:block;color:var(--g);font-size:15px}
+.stretch{display:inline-block;margin-top:10px;color:var(--p);font:600 15px "Inter",sans-serif;text-decoration:none;border-bottom:2px solid var(--p);padding-bottom:1px}
+.stretch::after{content:"";position:absolute;inset:0;border-radius:18px}
+.price{font:700 44px "Space Grotesk",sans-serif;margin:8px 0 18px;letter-spacing:-.03em}
+.price small{font:400 14px "Inter",sans-serif;color:var(--g);letter-spacing:0}
+ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:var(--g)}
+li::before{content:"\2713";color:var(--p);font-weight:700;margin-right:10px}
+#pricing .card:nth-child(2){border:2px solid var(--p);padding:31px}
+.note{color:var(--g);font-size:14px;margin-top:28px}
+#contact{background:linear-gradient(180deg,#fff,#f1ebff);padding:110px 0}
+#contact::before{content:"";position:absolute;left:50%;top:-160px;width:620px;height:620px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(109,53,242,.2),transparent 65%)}
+.cta{position:relative;text-align:center;background:rgba(255,255,255,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(109,53,242,.16);border-radius:28px;padding:72px 28px;box-shadow:0 20px 50px rgba(11,10,16,.07)}
+.cta p{color:var(--g);margin:14px auto 32px;max-width:42ch}
+.cta .btn.p{padding:16px 32px}
+footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:var(--g);font:400 14px "Inter",sans-serif}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px}
+@media (max-width:640px){.hero{padding:60px 0}section{padding:72px 0}}
 @media (max-width:560px){nav a:not(.keep){display:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
+/* futuristic layer */
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(109,53,242,.7),transparent)}
+.hero{background-image:linear-gradient(rgba(185,155,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(185,155,255,.09) 1px,transparent 1px);background-size:56px 56px;background-position:center top}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(44px,30px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero::before{animation:drift 14s ease-in-out infinite}
+.hero::after{animation:drift 18s ease-in-out infinite reverse}
+.glass{--mx:30%;--my:20%;position:relative;overflow:hidden;border-color:rgba(185,155,255,.32);box-shadow:0 0 0 1px rgba(255,255,255,.04) inset,0 30px 80px rgba(109,53,242,.28)}
+.glass::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(185,155,255,.22),transparent 70%);pointer-events:none}
+.glass>*{position:relative}
+h1{background:linear-gradient(100deg,#fff 30%,#cdb9ff 68%,#9272ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.eyebrow{font:500 12px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow::before{width:8px;height:8px;border-radius:50%;background:#9272ff;box-shadow:0 0 12px #9272ff;margin-right:12px;animation:pulse 2s ease-in-out infinite}
+.btn.p{box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 8px 28px rgba(109,53,242,.45)}
+.btn.p:hover{box-shadow:0 0 0 1px rgba(255,255,255,.2) inset,0 10px 38px rgba(109,53,242,.7)}
+main{counter-reset:s}
+section h2::before{counter-increment:s;content:"0" counter(s) " /";display:block;font:500 12px "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--p);margin-bottom:14px}
+#services,#pricing{background-image:linear-gradient(rgba(11,10,16,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(11,10,16,.035) 1px,transparent 1px),linear-gradient(180deg,#fff,#f7f3ff);background-size:48px 48px,48px 48px,auto}
+#work{background-image:linear-gradient(rgba(11,10,16,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(11,10,16,.03) 1px,transparent 1px);background-size:48px 48px}
+.card:hover{border-color:rgba(109,53,242,.5);box-shadow:0 0 0 1px rgba(109,53,242,.25),0 18px 44px rgba(109,53,242,.16)}
+.mock{transition:transform .2s,box-shadow .2s}
+#work .grid>div:hover .mock{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(109,53,242,.35),0 18px 44px rgba(109,53,242,.18)}
+#pricing .card:nth-child(2){box-shadow:0 0 0 1px rgba(109,53,242,.2),0 18px 50px rgba(109,53,242,.22)}
+.price small{font:400 12px "JetBrains Mono",monospace}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.up{transform:translateY(-20px)}
+.js .rv.in{opacity:1;transform:none}
+.js .card.rv.in:hover{transform:translateY(-3px);transition-duration:.25s}
+@media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.eyebrow::before{animation:none}.js .rv{opacity:1;transform:none;transition:none}.mock{transition:none}}
 </style>
 </head>
 <body>
@@ -96,26 +136,26 @@ footer{padding:36px 0 46px;color:var(--mut);font-size:14px;text-align:center}
 </div></header>
 
 <main id="top">
-<div class="hero"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="glass">
   <div class="eyebrow">Websites &middot; Videos &middot; Ads</div>
-  <h1>We help local businesses get seen.</h1>
-  <p class="lead">Quask Studio builds clean websites, scroll-stopping short videos, and ads that bring new customers through your door.</p>
-  <div class="btns"><a class="btn p" href="#work">See samples</a><a class="btn s" href="#contact">Get in touch</a></div>
-</div></div>
+  <h1>I help local businesses get seen.</h1>
+  <p class="lead">I make simple websites, short videos, and ads for local businesses, so more people find you and come through your door.</p>
+  <div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn s" href="#contact">Say hello</a></div>
+</div></div></div>
 
 <section id="services"><div class="wrap">
-  <h2>What we make</h2>
-  <p class="sub">Everything a small business needs to look good online, in one place.</p>
+  <h2>What I make</h2>
+  <p class="sub">Everything a small business needs to look good online, from one person who cares about the details.</p>
   <div class="grid">
-    <div class="card"><span class="num">01</span><h3>Websites</h3><p>Fast, mobile-friendly sites with your services, prices, map, and a booking button, set up so Google can find you.</p></div>
-    <div class="card"><span class="num">02</span><h3>Short-form video</h3><p>Reels, TikToks, and Shorts edited to grab attention in the first second and keep people watching.</p></div>
-    <div class="card"><span class="num">03</span><h3>Ads</h3><p>Simple video and image ads built to turn scrolling into bookings, matched to your brand.</p></div>
+    <div class="card"><span class="num">01</span><h3>Websites</h3><p>Fast sites that look great on a phone, with your services, prices, map, and a booking button, set up so Google can find you.</p></div>
+    <div class="card"><span class="num">02</span><h3>Short-form video</h3><p>Reels, TikToks, and Shorts I edit by hand to grab attention in the first second and keep people watching.</p></div>
+    <div class="card"><span class="num">03</span><h3>Ads</h3><p>Simple video and image ads that turn scrolling into bookings, designed to match your brand.</p></div>
   </div>
 </div></section>
 
 <section id="work"><div class="wrap">
   <h2>Samples</h2>
-  <p class="sub">Concept designs showing the kind of work we can make for your business. Click a sample to open the full site.</p>
+  <p class="sub">Concept designs that show the kind of work I can make for your business. Click one to open the full site.</p>
   <div class="grid">
     <div>
       <div class="mock barber"><div class="bar"><i></i><i></i><i></i></div><div class="scr"><small>BLADE &amp; CO.</small><b>Fades. Beards.<br>Done right.</b><span class="mb">Book now</span><div class="tiles"><u></u><u></u><u></u></div></div></div>
@@ -138,7 +178,7 @@ footer{padding:36px 0 46px;color:var(--mut);font-size:14px;text-align:center}
 
 <section id="pricing"><div class="wrap">
   <h2>Simple pricing</h2>
-  <p class="sub">One-time build, then an optional monthly plan for hosting and updates.</p>
+  <p class="sub">One price to build it, then an optional monthly plan so I can look after your site.</p>
   <div class="grid">
     <div class="card"><h3>Starter</h3><div class="price">$200 <small>one-time</small></div><ul><li>One-page website</li><li>Mobile-friendly</li><li>Contact, map, socials</li><li>Basic SEO</li></ul></div>
     <div class="card"><h3>Standard</h3><div class="price">$400 <small>one-time</small></div><ul><li>Up to 5 pages</li><li>Photo gallery</li><li>Google Search Console setup</li><li>Everything in Starter</li></ul></div>
@@ -150,14 +190,25 @@ footer{padding:36px 0 46px;color:var(--mut);font-size:14px;text-align:center}
 <section id="contact"><div class="wrap">
   <div class="cta">
     <h2>Let’s get your business seen.</h2>
-    <p>Tell us about your business and we’ll send you a free sample design.</p>
+    <p>Tell me about your business and I’ll send you a free sample design.</p>
     <a class="btn p" href="mailto:quaskstudiohq@gmail.com">quaskstudiohq@gmail.com</a>
   </div>
 </div></section>
 </main>
 <footer><div class="wrap">&copy; Quask Studio</div></footer>
 <script>
-(function(){var D={'Quask Studio | Websites, videos and ads for local businesses':['Quask Studio | Strony internetowe, filmy i reklamy dla lokalnych firm','Quask Studio | Website, video và quảng cáo cho doanh nghiệp địa phương'],'Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.':['Quask Studio tworzy strony internetowe, krótkie filmy i reklamy, dzięki którym lokalne firmy są lepiej widoczne.','Quask Studio tạo website, video ngắn và quảng cáo giúp doanh nghiệp địa phương được nhiều người biết đến.'],'Services':['Usługi','Dịch vụ'],'Samples':['Przykłady','Mẫu'],'Pricing':['Cennik','Bảng giá'],'Contact':['Kontakt','Liên hệ'],'Websites · Videos · Ads':['Strony · Filmy · Reklamy','Website · Video · Quảng cáo'],'We help local businesses get seen.':['Pomagamy lokalnym firmom być zauważonymi.','Chúng tôi giúp doanh nghiệp địa phương được nhiều người biết đến.'],'Quask Studio builds clean websites, scroll-stopping short videos, and ads that bring new customers through your door.':['Quask Studio tworzy przejrzyste strony internetowe, krótkie filmy przyciągające uwagę i reklamy, które sprowadzają nowych klientów do Twoich drzwi.','Quask Studio tạo website gọn gàng, video ngắn thu hút người xem và quảng cáo đưa khách hàng mới đến cửa hàng của bạn.'],'See samples':['Zobacz przykłady','Xem mẫu'],'Get in touch':['Skontaktuj się','Liên hệ với chúng tôi'],'What we make':['Co tworzymy','Chúng tôi làm gì'],'Everything a small business needs to look good online, in one place.':['Wszystko, czego mała firma potrzebuje, by dobrze wyglądać w sieci, w jednym miejscu.','Mọi thứ một doanh nghiệp nhỏ cần để trông thật tốt trên mạng, tại một nơi.'],'Websites':['Strony internetowe','Website'],'Fast, mobile-friendly sites with your services, prices, map, and a booking button, set up so Google can find you.':['Szybkie strony dostosowane do telefonów, z usługami, cenami, mapą i przyciskiem rezerwacji, przygotowane tak, by Google mogło je znaleźć.','Website nhanh, thân thiện với điện thoại, có dịch vụ, bảng giá, bản đồ và nút đặt lịch, được thiết lập để Google dễ tìm thấy.'],'Short-form video':['Krótkie formy wideo','Video ngắn'],'Reels, TikToks, and Shorts edited to grab attention in the first second and keep people watching.':['Reels, TikToki i Shorts zmontowane tak, by przyciągnąć uwagę w pierwszej sekundzie i utrzymać widzów.','Reels, TikTok và Shorts được dựng để thu hút sự chú ý ngay từ giây đầu tiên và giữ chân người xem.'],'Ads':['Reklamy','Quảng cáo'],'Simple video and image ads built to turn scrolling into bookings, matched to your brand.':['Proste reklamy wideo i graficzne, które zamieniają przewijanie w rezerwacje, dopasowane do Twojej marki.','Quảng cáo video và hình ảnh đơn giản biến lượt lướt thành lượt đặt lịch, phù hợp với thương hiệu của bạn.'],'Concept designs showing the kind of work we can make for your business. Click a sample to open the full site.':['Przykładowe projekty pokazujące, co możemy stworzyć dla Twojej firmy. Kliknij przykład, aby otworzyć pełną stronę.','Các thiết kế ý tưởng cho thấy loại sản phẩm chúng tôi có thể làm cho doanh nghiệp của bạn. Nhấp vào một mẫu để mở trang đầy đủ.'],'Fades. Beards.':['Fade. Broda.','Fade. Râu.'],'Done right.':['Zrobione jak trzeba.','Chuẩn từng đường.'],'Book now':['Zarezerwuj','Đặt lịch ngay'],'Soft sets,':['Delikatne zestawy,','Bộ móng nhẹ nhàng,'],'sharp details.':['precyzyjne detale.','chi tiết sắc nét.'],'Book a visit':['Umów wizytę','Đặt lịch hẹn'],'Fire, olive oil,':['Ogień, oliwa,','Lửa, dầu ô liu,'],'good company.':['dobre towarzystwo.','bạn bè thân thiết.'],'Reserve a table':['Zarezerwuj stolik','Đặt bàn'],'9:16 SHORT-FORM':['KRÓTKI FILM 9:16','VIDEO NGẮN 9:16'],'HOOK · OFFER · BOOK NOW':['HAK · OFERTA · REZERWUJ','MỞ ĐẦU · ƯU ĐÃI · ĐẶT NGAY'],'Barbershop website':['Strona dla barbera','Website cho tiệm cắt tóc'],'Dark, bold, built for bookings':['Ciemna, odważna, stworzona pod rezerwacje','Tối giản, mạnh mẽ, tối ưu cho đặt lịch'],'View sample site →':['Zobacz przykładową stronę →','Xem website mẫu →'],'Nail salon website':['Strona dla salonu paznokci','Website cho tiệm nail'],'Soft, elegant, photo-first':['Delikatna, elegancka, stawia na zdjęcia','Nhẹ nhàng, thanh lịch, ưu tiên hình ảnh'],'Restaurant website':['Strona dla restauracji','Website cho nhà hàng'],'Warm, seasonal, menu-first':['Ciepła, sezonowa, z menu na pierwszym planie','Ấm cúng, theo mùa, nổi bật thực đơn'],'Short-form ad':['Reklama w krótkiej formie','Quảng cáo video ngắn'],'Quick, punchy, made for scrolling':['Szybka, dynamiczna, stworzona do przewijania','Nhanh, mạnh, làm cho người lướt mạng'],'Simple pricing':['Prosty cennik','Bảng giá đơn giản'],'One-time build, then an optional monthly plan for hosting and updates.':['Jednorazowa realizacja, potem opcjonalny plan miesięczny na hosting i aktualizacje.','Thanh toán một lần cho việc xây dựng, sau đó có thể chọn gói hàng tháng cho hosting và cập nhật.'],'one-time':['jednorazowo','một lần'],'One-page website':['Strona jednostronicowa','Website một trang'],'Mobile-friendly':['Dostosowana do telefonów','Thân thiện với điện thoại'],'Contact, map, socials':['Kontakt, mapa, media społecznościowe','Liên hệ, bản đồ, mạng xã hội'],'Basic SEO':['Podstawowe SEO','SEO cơ bản'],'Up to 5 pages':['Do 5 podstron','Tối đa 5 trang'],'Photo gallery':['Galeria zdjęć','Thư viện ảnh'],'Google Search Console setup':['Konfiguracja Google Search Console','Thiết lập Google Search Console'],'Everything in Starter':['Wszystko z pakietu Starter','Tất cả những gì có trong gói Starter'],'Up to 7 pages':['Do 7 podstron','Tối đa 7 trang'],'Hero video or reel gallery':['Film w nagłówku lub galeria reels','Video chính hoặc thư viện reel'],'Custom styling and animation':['Indywidualna stylistyka i animacje','Phong cách riêng và hiệu ứng chuyển động'],'Everything in Standard':['Wszystko z pakietu Standard','Tất cả những gì có trong gói Standard'],'Monthly upkeep from $20. Prices are in USD and you get a written quote before any work begins.':['Miesięczna opieka od $20. Ceny podano w USD, a pisemną wycenę otrzymasz przed rozpoczęciem pracy.','Gói duy trì hàng tháng từ $20. Giá tính bằng USD và bạn nhận được báo giá bằng văn bản trước khi bắt đầu.'],'Let’s get your business seen.':['Sprawmy, żeby Twoją firmę zauważono.','Hãy để nhiều người biết đến doanh nghiệp của bạn.'],'Tell us about your business and we’ll send you a free sample design.':['Opowiedz nam o swojej firmie, a wyślemy Ci darmowy przykładowy projekt.','Hãy kể cho chúng tôi về doanh nghiệp của bạn, chúng tôi sẽ gửi bạn một thiết kế mẫu miễn phí.']};var L='en',N=[];try{L=localStorage.getItem('lang')||'en'}catch(e){}if(!/^(en|pl|vi)$/.test(L))L='en';var W=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode.nodeName;return(p==='SCRIPT'||p==='STYLE'||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),n;while(n=W.nextNode())N.push([n,n.nodeValue]);var T0=document.title,M=document.querySelector('meta[name=description]'),M0=M?M.content:'';function tr(s,i){var k=s.trim(),v=D[k];return v&&v[i]?s.replace(k,function(){return v[i]}):s}function ap(l){var i=l==='pl'?0:1,en=l==='en';N.forEach(function(p){p[0].nodeValue=en?p[1]:tr(p[1],i)});document.title=en?T0:tr(T0,i);if(M)M.content=en?M0:tr(M0,i);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});try{localStorage.setItem('lang',l)}catch(e){}}document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){ap(b.dataset.l)}});ap(L)})();
+(function(){var D={'Quask Studio | Websites, videos and ads for local businesses':['Quask Studio | Strony internetowe, filmy i reklamy dla lokalnych firm','Quask Studio | Website, video và quảng cáo cho doanh nghiệp địa phương'],'Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.':['Quask Studio tworzy strony internetowe, krótkie filmy i reklamy, dzięki którym lokalne firmy są lepiej widoczne.','Quask Studio tạo website, video ngắn và quảng cáo giúp doanh nghiệp địa phương được nhiều người biết đến.'],'Services':['Usługi','Dịch vụ'],'Samples':['Przykłady','Mẫu'],'Pricing':['Cennik','Bảng giá'],'Contact':['Kontakt','Liên hệ'],'Websites · Videos · Ads':['Strony · Filmy · Reklamy','Website · Video · Quảng cáo'],'We help local businesses get seen.':['Pomagamy lokalnym firmom być zauważonymi.','Chúng tôi giúp doanh nghiệp địa phương được nhiều người biết đến.'],'Quask Studio builds clean websites, scroll-stopping short videos, and ads that bring new customers through your door.':['Quask Studio tworzy przejrzyste strony internetowe, krótkie filmy przyciągające uwagę i reklamy, które sprowadzają nowych klientów do Twoich drzwi.','Quask Studio tạo website gọn gàng, video ngắn thu hút người xem và quảng cáo đưa khách hàng mới đến cửa hàng của bạn.'],'See samples':['Zobacz przykłady','Xem mẫu'],'Get in touch':['Skontaktuj się','Liên hệ với chúng tôi'],'What we make':['Co tworzymy','Chúng tôi làm gì'],'Everything a small business needs to look good online, in one place.':['Wszystko, czego mała firma potrzebuje, by dobrze wyglądać w sieci, w jednym miejscu.','Mọi thứ một doanh nghiệp nhỏ cần để trông thật tốt trên mạng, tại một nơi.'],'Websites':['Strony internetowe','Website'],'Fast, mobile-friendly sites with your services, prices, map, and a booking button, set up so Google can find you.':['Szybkie strony dostosowane do telefonów, z usługami, cenami, mapą i przyciskiem rezerwacji, przygotowane tak, by Google mogło je znaleźć.','Website nhanh, thân thiện với điện thoại, có dịch vụ, bảng giá, bản đồ và nút đặt lịch, được thiết lập để Google dễ tìm thấy.'],'Short-form video':['Krótkie formy wideo','Video ngắn'],'Reels, TikToks, and Shorts edited to grab attention in the first second and keep people watching.':['Reels, TikToki i Shorts zmontowane tak, by przyciągnąć uwagę w pierwszej sekundzie i utrzymać widzów.','Reels, TikTok và Shorts được dựng để thu hút sự chú ý ngay từ giây đầu tiên và giữ chân người xem.'],'Ads':['Reklamy','Quảng cáo'],'Simple video and image ads built to turn scrolling into bookings, matched to your brand.':['Proste reklamy wideo i graficzne, które zamieniają przewijanie w rezerwacje, dopasowane do Twojej marki.','Quảng cáo video và hình ảnh đơn giản biến lượt lướt thành lượt đặt lịch, phù hợp với thương hiệu của bạn.'],'Concept designs showing the kind of work we can make for your business. Click a sample to open the full site.':['Przykładowe projekty pokazujące, co możemy stworzyć dla Twojej firmy. Kliknij przykład, aby otworzyć pełną stronę.','Các thiết kế ý tưởng cho thấy loại sản phẩm chúng tôi có thể làm cho doanh nghiệp của bạn. Nhấp vào một mẫu để mở trang đầy đủ.'],'Fades. Beards.':['Fade. Broda.','Fade. Râu.'],'Done right.':['Zrobione jak trzeba.','Chuẩn từng đường.'],'Book now':['Zarezerwuj','Đặt lịch ngay'],'Soft sets,':['Delikatne zestawy,','Bộ móng nhẹ nhàng,'],'sharp details.':['precyzyjne detale.','chi tiết sắc nét.'],'Book a visit':['Umów wizytę','Đặt lịch hẹn'],'Fire, olive oil,':['Ogień, oliwa,','Lửa, dầu ô liu,'],'good company.':['dobre towarzystwo.','bạn bè thân thiết.'],'Reserve a table':['Zarezerwuj stolik','Đặt bàn'],'9:16 SHORT-FORM':['KRÓTKI FILM 9:16','VIDEO NGẮN 9:16'],'HOOK · OFFER · BOOK NOW':['HAK · OFERTA · REZERWUJ','MỞ ĐẦU · ƯU ĐÃI · ĐẶT NGAY'],'Barbershop website':['Strona dla barbera','Website cho tiệm cắt tóc'],'Dark, bold, built for bookings':['Ciemna, odważna, stworzona pod rezerwacje','Tối giản, mạnh mẽ, tối ưu cho đặt lịch'],'View sample site →':['Zobacz przykładową stronę →','Xem website mẫu →'],'Nail salon website':['Strona dla salonu paznokci','Website cho tiệm nail'],'Soft, elegant, photo-first':['Delikatna, elegancka, stawia na zdjęcia','Nhẹ nhàng, thanh lịch, ưu tiên hình ảnh'],'Restaurant website':['Strona dla restauracji','Website cho nhà hàng'],'Warm, seasonal, menu-first':['Ciepła, sezonowa, z menu na pierwszym planie','Ấm cúng, theo mùa, nổi bật thực đơn'],'Short-form ad':['Reklama w krótkiej formie','Quảng cáo video ngắn'],'Quick, punchy, made for scrolling':['Szybka, dynamiczna, stworzona do przewijania','Nhanh, mạnh, làm cho người lướt mạng'],'Simple pricing':['Prosty cennik','Bảng giá đơn giản'],'One-time build, then an optional monthly plan for hosting and updates.':['Jednorazowa realizacja, potem opcjonalny plan miesięczny na hosting i aktualizacje.','Thanh toán một lần cho việc xây dựng, sau đó có thể chọn gói hàng tháng cho hosting và cập nhật.'],'one-time':['jednorazowo','một lần'],'One-page website':['Strona jednostronicowa','Website một trang'],'Mobile-friendly':['Dostosowana do telefonów','Thân thiện với điện thoại'],'Contact, map, socials':['Kontakt, mapa, media społecznościowe','Liên hệ, bản đồ, mạng xã hội'],'Basic SEO':['Podstawowe SEO','SEO cơ bản'],'Up to 5 pages':['Do 5 podstron','Tối đa 5 trang'],'Photo gallery':['Galeria zdjęć','Thư viện ảnh'],'Google Search Console setup':['Konfiguracja Google Search Console','Thiết lập Google Search Console'],'Everything in Starter':['Wszystko z pakietu Starter','Tất cả những gì có trong gói Starter'],'Up to 7 pages':['Do 7 podstron','Tối đa 7 trang'],'Hero video or reel gallery':['Film w nagłówku lub galeria reels','Video chính hoặc thư viện reel'],'Custom styling and animation':['Indywidualna stylistyka i animacje','Phong cách riêng và hiệu ứng chuyển động'],'Everything in Standard':['Wszystko z pakietu Standard','Tất cả những gì có trong gói Standard'],'Monthly upkeep from $20. Prices are in USD and you get a written quote before any work begins.':['Miesięczna opieka od $20. Ceny podano w USD, a pisemną wycenę otrzymasz przed rozpoczęciem pracy.','Gói duy trì hàng tháng từ $20. Giá tính bằng USD và bạn nhận được báo giá bằng văn bản trước khi bắt đầu.'],'Let’s get your business seen.':['Sprawmy, żeby Twoją firmę zauważono.','Hãy để nhiều người biết đến doanh nghiệp của bạn.'],'Tell us about your business and we’ll send you a free sample design.':['Opowiedz nam o swojej firmie, a wyślemy Ci darmowy przykładowy projekt.','Hãy kể cho chúng tôi về doanh nghiệp của bạn, chúng tôi sẽ gửi bạn một thiết kế mẫu miễn phí.']};Object.assign(D,{'I help local businesses get seen.':['Pomagam lokalnym firmom być zauważonymi.','Tôi giúp doanh nghiệp địa phương được nhiều người biết đến.'],'I make simple websites, short videos, and ads for local businesses, so more people find you and come through your door.':['Tworzę proste strony internetowe, krótkie filmy i reklamy dla lokalnych firm, żeby więcej osób Cię znalazło i przyszło do Twoich drzwi.','Tôi làm website đơn giản, video ngắn và quảng cáo cho doanh nghiệp địa phương, để nhiều người tìm thấy bạn hơn và ghé vào cửa hàng của bạn.'],'See my work':['Zobacz moje prace','Xem công việc của tôi'],'Say hello':['Napisz do mnie','Nhắn tin cho tôi'],'What I make':['Co tworzę','Tôi làm gì'],'Everything a small business needs to look good online, from one person who cares about the details.':['Wszystko, czego mała firma potrzebuje, by dobrze wyglądać w sieci, od jednej osoby, której zależy na szczegółach.','Mọi thứ một doanh nghiệp nhỏ cần để trông thật tốt trên mạng, từ một người chăm chút từng chi tiết.'],'Fast sites that look great on a phone, with your services, prices, map, and a booking button, set up so Google can find you.':['Szybkie strony, które świetnie wyglądają na telefonie, z usługami, cenami, mapą i przyciskiem rezerwacji, przygotowane tak, by Google mogło je znaleźć.','Website nhanh, hiển thị đẹp trên điện thoại, có dịch vụ, bảng giá, bản đồ và nút đặt lịch, được thiết lập để Google dễ tìm thấy.'],'Reels, TikToks, and Shorts I edit by hand to grab attention in the first second and keep people watching.':['Reels, TikToki i Shorts, które montuję ręcznie, żeby przyciągnąć uwagę w pierwszej sekundzie i utrzymać widzów.','Reels, TikTok và Shorts do tôi tự tay dựng để thu hút sự chú ý ngay từ giây đầu tiên và giữ chân người xem.'],'Simple video and image ads that turn scrolling into bookings, designed to match your brand.':['Proste reklamy wideo i graficzne, które zamieniają przewijanie w rezerwacje, zaprojektowane tak, by pasowały do Twojej marki.','Quảng cáo video và hình ảnh đơn giản biến lượt lướt thành lượt đặt lịch, được thiết kế phù hợp với thương hiệu của bạn.'],'Concept designs that show the kind of work I can make for your business. Click one to open the full site.':['Projekty koncepcyjne pokazujące, co mogę stworzyć dla Twojej firmy. Kliknij jeden, aby otworzyć pełną stronę.','Các thiết kế ý tưởng cho thấy loại sản phẩm tôi có thể làm cho doanh nghiệp của bạn. Nhấp vào một mẫu để mở trang đầy đủ.'],'One price to build it, then an optional monthly plan so I can look after your site.':['Jedna cena za wykonanie, potem opcjonalny plan miesięczny, dzięki któremu zadbam o Twoją stronę.','Một mức giá để xây dựng, sau đó là gói hàng tháng tùy chọn để tôi chăm sóc website cho bạn.'],'Tell me about your business and I’ll send you a free sample design.':['Opowiedz mi o swojej firmie, a wyślę Ci darmowy przykładowy projekt.','Hãy kể cho tôi nghe về doanh nghiệp của bạn, tôi sẽ gửi bạn một thiết kế mẫu miễn phí.']});var L='en',N=[];try{L=localStorage.getItem('lang')||'en'}catch(e){}if(!/^(en|pl|vi)$/.test(L))L='en';var W=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode.nodeName;return(p==='SCRIPT'||p==='STYLE'||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),n;while(n=W.nextNode())N.push([n,n.nodeValue]);var T0=document.title,M=document.querySelector('meta[name=description]'),M0=M?M.content:'';function tr(s,i){var k=s.trim(),v=D[k];return v&&v[i]?s.replace(k,function(){return v[i]}):s}function ap(l){var i=l==='pl'?0:1,en=l==='en';N.forEach(function(p){p[0].nodeValue=en?p[1]:tr(p[1],i)});document.title=en?T0:tr(T0,i);if(M)M.content=en?M0:tr(M0,i);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});try{localStorage.setItem('lang',l)}catch(e){}}document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){ap(b.dataset.l)}});ap(L)})();
+(function(){var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,h=document.querySelector('.hero'),g=document.querySelector('.glass');
+if(h&&g&&!rm&&matchMedia('(hover:hover)').matches){h.addEventListener('pointermove',function(e){var r=g.getBoundingClientRect();g.style.setProperty('--mx',(e.clientX-r.left)+'px');g.style.setProperty('--my',(e.clientY-r.top)+'px')})}
+if(rm||!('IntersectionObserver' in window))return;
+document.documentElement.classList.add('js');
+var els=document.querySelectorAll('.card,#work .grid>div,.cta');
+els.forEach(function(e){e.classList.add('rv')});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){var t=x.target,i=Array.prototype.indexOf.call(els,t);
+if(x.isIntersecting){t.style.transitionDelay=((i%3)*80)+'ms';t.classList.remove('up');t.classList.add('in')}
+else{t.style.transitionDelay='0ms';t.classList.toggle('up',x.boundingClientRect.top<0);t.classList.remove('in')}})},{threshold:0,rootMargin:'-8% 0px -8% 0px'});
+els.forEach(function(e){io.observe(e)});
+})();
 </script>
 </body>
 </html>
