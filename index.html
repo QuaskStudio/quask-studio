@@ -12,6 +12,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Quask Studio","description":"Quask Studio builds websites, short-form videos, and ads that help local businesses get seen.","email":"quaskstudiohq@gmail.com","serviceType":["Website design","Short-form video editing","Advertising"]}</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<script>(function(){var seen=false;try{seen=!!sessionStorage.getItem('qi')}catch(e){}try{if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&!seen&&!location.hash)document.documentElement.classList.add('js-intro')}catch(e){}})();</script>
 <style>
 :root{--cloud:#f4f8fc;--white:#fff;--sky:#5db4ec;--sky2:#bfe2f8;--skyd:#1f7fbf;--ink:#0f1b2d;--g:#4c5d73;--red:#d62828;--red2:#b71f1f;--line:rgba(15,27,45,.1);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
@@ -110,9 +111,30 @@ footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:v
 @media (max-width:640px){.hero{padding:60px 0}section{padding:72px 0}}
 @media (max-width:560px){nav a:not(.keep){display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before,.hero::after,.eyebrow::before{animation:none}.btn,.card,.mock{transition:none}.js .rv{opacity:1;transform:none;transition:none}}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background-color:var(--ink);background-image:linear-gradient(rgba(93,180,236,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(93,180,236,.1) 1px,transparent 1px);background-size:56px 56px;color:#fff;display:none;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;cursor:pointer}
+.js-intro #intro{display:flex}
+#intro.out{transform:translateY(-100%);transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.in-word{display:flex;white-space:pre;font:700 clamp(48px,13vw,150px)/1.05 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.04em;overflow:hidden;text-shadow:0 0 50px rgba(93,180,236,.35)}
+.in-word span{display:inline-block;transform:translateY(115%);animation:rise .85s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i) * 55ms + 150ms)}
+.in-word .dot{color:var(--red)}
+.in-tag{margin-top:20px;font:500 13px "JetBrains Mono",monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--sky2);opacity:0;animation:fadein .7s ease 1.05s forwards}
+.in-bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.1)}
+.in-bar i{display:block;height:100%;background:var(--red);transform:scaleX(0);transform-origin:left;animation:fillbar 1.9s cubic-bezier(.6,0,.2,1) forwards}
+.in-count{position:absolute;left:22px;bottom:24px;font:500 13px "JetBrains Mono",monospace;color:#9fb4c9;letter-spacing:.1em}
+@keyframes rise{to{transform:none}}
+@keyframes fadein{to{opacity:1}}
+@keyframes fillbar{to{transform:scaleX(1)}}
+.js-intro .glass>*{opacity:0;transform:translateY(22px)}
+body.intro-done .glass>*{opacity:1;transform:none;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+body.intro-done .glass>*:nth-child(1){transition-delay:.35s}
+body.intro-done .glass>*:nth-child(2){transition-delay:.45s}
+body.intro-done .glass>*:nth-child(3){transition-delay:.55s}
+body.intro-done .glass>*:nth-child(4){transition-delay:.65s}
 </style>
 </head>
 <body>
+<div id="intro" aria-hidden="true"><div class="in-wrap"><div class="in-word" id="inword">Quask Studio</div><div class="in-tag">Websites · Videos · Ads</div></div><div class="in-bar"><i></i></div><div class="in-count" id="incount">000</div></div>
 <header><div class="wrap">
   <a class="logo" href="#top">Quask<span>.</span>Studio</a>
   <nav><a href="#services">Services</a><a href="#work">Samples</a><a href="#pricing">Pricing</a><a class="keep" href="#contact">Contact</a></nav>
@@ -192,6 +214,17 @@ var io=new IntersectionObserver(function(es){es.forEach(function(x){var t=x.targ
 if(x.isIntersecting){t.style.transitionDelay=((i%3)*80)+'ms';t.classList.remove('up');t.classList.add('in')}
 else{t.style.transitionDelay='0ms';t.classList.toggle('up',x.boundingClientRect.top<0);t.classList.remove('in')}})},{threshold:0,rootMargin:'-8% 0px -8% 0px'});
 els.forEach(function(e){io.observe(e)});
+})();
+(function(){var d=document,h=d.documentElement,el=d.getElementById('intro');if(!el||!h.classList.contains('js-intro'))return;
+var w=d.getElementById('inword'),t=w.textContent;w.textContent='';
+t.split('').forEach(function(c,i){var s=d.createElement('span');s.textContent=c;s.style.setProperty('--i',i);w.appendChild(s)});
+var dot=d.createElement('span');dot.textContent='.';dot.className='dot';dot.style.setProperty('--i',t.length);w.appendChild(dot);
+d.body.style.overflow='hidden';
+var cnt=d.getElementById('incount'),t0=performance.now(),done=false;
+function tick(now){var p=Math.min(1,(now-t0)/1900);cnt.textContent=('00'+Math.round(p*100)).slice(-3);if(p<1&&!done)requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+function finish(){if(done)return;done=true;el.classList.add('out');d.body.classList.add('intro-done');try{sessionStorage.setItem('qi','1')}catch(e){}setTimeout(function(){el.remove();d.body.style.overflow='';h.classList.remove('js-intro')},1000)}
+setTimeout(finish,2400);el.addEventListener('click',finish);
 })();
 </script>
 </body>
