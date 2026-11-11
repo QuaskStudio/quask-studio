@@ -96,8 +96,8 @@ h2::before{counter-increment:s;content:"0" counter(s) " /";display:block;font:50
 .card:hover,.card:focus-visible{transform:translateY(-5px);box-shadow:0 0 0 1px rgba(93,180,236,.5),0 20px 44px rgba(31,127,191,.28)}
 .card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
 .card.has-clip video{opacity:1}
-.card::after{content:"";position:absolute;inset:auto 0 0;height:58%;background:linear-gradient(transparent,rgba(15,27,45,.78));opacity:0;transition:opacity .3s;pointer-events:none}
-.card.has-clip{--t:#fff}.card.has-clip::after{opacity:1}
+.card::after{content:"";position:absolute;inset:auto 0 0;height:66%;background:linear-gradient(transparent,rgba(15,27,45,.88));opacity:0;transition:opacity .3s;pointer-events:none}
+.card.has-clip{color:#fff!important}.card.has-clip::after{opacity:1}.card.has-clip .top span{background:rgba(15,27,45,.45);border-color:rgba(255,255,255,.35);color:#fff}
 .card>*{position:relative;z-index:2}
 .card video{z-index:0}
 .top{display:flex;justify-content:space-between;gap:8px;font:600 11px "Inter",sans-serif}
@@ -106,7 +106,7 @@ h2::before{counter-increment:s;content:"0" counter(s) " /";display:block;font:50
 .play svg{width:22px;height:22px;margin-left:3px}
 .card:hover .play{transform:scale(1.1)}.card.playing .play{opacity:0}
 .meta h3{font-size:21px;margin-bottom:4px}
-.meta p{margin:0;font-size:14px;opacity:.85}
+.meta p{margin:0;font-size:14px;opacity:.9}.meta{text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .empty{grid-column:1/-1;color:var(--g)}
 #contact{background:linear-gradient(180deg,var(--cloud),#d8edfa);padding:100px 0}
 #contact::before{content:"";position:absolute;left:50%;top:-160px;width:600px;height:600px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(93,180,236,.35),transparent 65%)}
@@ -192,7 +192,7 @@ var EDITS=[
   {title:"Diamond Nails", platform:"Reels", views:"13.1K views", year:"2025", url:"https://www.instagram.com/reel/DLVm6-EMrtR/?srtk=MzRlODBiNWFlZA==", clip:"videos/nails.mp4"},
   {title:"Meo Barber", platform:"Facebook", views:"21 likes", year:"2025", url:"https://www.facebook.com/reel/728253019617889", clip:"videos/snoop.mp4"}
 ];
-var TINTS=[["#bfe2f8","#5db4ec","#0f1b2d"],["#eaf5fc","#bfe2f8","#0f1b2d"],["#5db4ec","#1f7fbf","#ffffff"],["#0f1b2d","#2a8fd4","#ffffff"]];
+var TINTS=[["#2a8fd4","#0f1b2d","#ffffff"],["#1f7fbf","#0f1b2d","#ffffff"],["#5db4ec","#1f5f99","#ffffff"],["#0f1b2d","#2a8fd4","#ffffff"]];
 var LABELS={TikTok:"TikTok",Reels:"Instagram Reels",Shorts:"YouTube Shorts",Facebook:"Facebook Reels"};
 var D={pl:{
 'Short-form edits | Quask Studio':'Krótkie formy wideo | Quask Studio','TikToks, Reels, Shorts, and Facebook Reels edited by Karol Vu at Quask Studio.':'TikToki, Reels, Shorts i Facebook Reels zmontowane przez Karola Vu w Quask Studio.',
@@ -218,7 +218,7 @@ var T0=d.title,M=d.querySelector('meta[name=description]'),M0=M.content;
 function el(t,c,x){var n=d.createElement(t);if(c)n.className=c;if(x!==undefined)n.textContent=x;return n}
 function playClip(c,v){var p=v.play();if(p&&p.catch)p.catch(function(){});c.classList.add('playing')}
 function stopClip(c,v){v.pause();try{v.currentTime=0}catch(x){}c.classList.remove('playing')}
-var pio=null;if(!reduce&&'IntersectionObserver' in window){pio=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target.querySelector('video');if(!v)return;if(en.isIntersecting)playClip(en.target,v);else stopClip(en.target,v)})},{threshold:.4})}
+var pio=null;if(touchOnly&&!reduce&&'IntersectionObserver' in window){pio=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target.querySelector('video');if(!v)return;if(en.isIntersecting)playClip(en.target,v);else stopClip(en.target,v)})},{threshold:.4})}
 var rio=null,rcards=[];
 function attachClip(a,src,t){var v=d.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');
 v.addEventListener('loadedmetadata',function(){a.classList.add('has-clip')});
