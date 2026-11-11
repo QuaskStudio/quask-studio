@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Short-form edits | Quask Studio">
 <meta property="og:description" content="TikToks, Reels, Shorts, and Facebook Reels edited by Karol Vu at Quask Studio.">
-
+<link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@ h2::before{counter-increment:s;content:"0" counter(s) " /";display:block;font:50
 .card{--a:#bfe2f8;--b:#5db4ec;--t:#0f1b2d;position:relative;aspect-ratio:9/14;border-radius:22px;overflow:hidden;background:linear-gradient(160deg,var(--a),var(--b));color:var(--t);display:flex;flex-direction:column;justify-content:space-between;padding:16px;text-decoration:none;box-shadow:0 10px 30px rgba(31,127,191,.14);transition:transform .25s,box-shadow .25s}
 .card:hover,.card:focus-visible{transform:translateY(-5px);box-shadow:0 0 0 1px rgba(93,180,236,.5),0 20px 44px rgba(31,127,191,.28)}
 .card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
-.card.playing video{opacity:1}
+.card.has-clip video{opacity:1}
 .card::after{content:"";position:absolute;inset:auto 0 0;height:58%;background:linear-gradient(transparent,rgba(15,27,45,.78));opacity:0;transition:opacity .3s;pointer-events:none}
 .card.has-clip{--t:#fff}.card.has-clip::after{opacity:1}
 .card>*{position:relative;z-index:2}
@@ -132,14 +132,14 @@ footer a{color:var(--g);text-decoration:none}footer a:hover{color:var(--ink)}
 </head>
 <body>
 <header><div class="wrap">
-  <a class="logo" href="#">Quask<span>.</span>Studio</a>
-  <nav><a href="#" data-i>Home</a><a href="#work" data-i>Edits</a><a class="keep" href="#contact" data-i>Contact</a></nav>
+  <a class="logo" href="../">Quask<span>.</span>Studio</a>
+  <nav><a href="../" data-i>Home</a><a href="#work" data-i>Edits</a><a class="keep" href="#contact" data-i>Contact</a></nav>
   <div class="lang" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">EN</button><button data-l="pl" aria-pressed="false">PL</button><button data-l="vi" aria-pressed="false">VI</button></div>
   <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu"><span class="m1" data-i>Menu</span><span class="m2" data-i>Close</span></button>
 </div></header>
 <div class="menu" id="menu" aria-hidden="true"><div class="menu-inner">
   <nav class="menu-links" aria-label="Menu">
-    <a href="#" data-n="01"><span style="--i:0" data-i>Home</span></a>
+    <a href="../" data-n="01"><span style="--i:0" data-i>Home</span></a>
     <a href="#work" data-n="02"><span style="--i:1" data-i>Edits</span></a>
     <a href="#contact" data-n="03"><span style="--i:2" data-i>Contact</span></a>
   </nav>
@@ -151,7 +151,7 @@ footer a{color:var(--g);text-decoration:none}footer a:hover{color:var(--ink)}
 <div class="hero"><div class="wrap"><div class="glass">
   <div class="eyebrow" data-i>Short-form edits</div>
   <h1 data-i>My short-form edits</h1>
-  <p class="lead" data-i>TikToks, Reels, Shorts, and Facebook Reels I edited. Hover over a card to preview it, then click to watch the real video.</p>
+  <p class="lead" data-i>TikToks, Reels, Shorts, and Facebook Reels I edited. Click a card to watch the real video.</p>
   <div class="btns"><a class="btn p" href="#work" data-i>See the edits</a><a class="btn s" href="#contact" data-i>Say hello</a></div>
 </div></div></div>
 
@@ -175,7 +175,7 @@ footer a{color:var(--g);text-decoration:none}footer a:hover{color:var(--ink)}
   <a class="btn p" href="mailto:karolvu2@gmail.com">karolvu2@gmail.com</a>
 </div></div></section>
 </main>
-<footer><div class="wrap"><span>© 2026 Quask Studio</span><span><a href="#" data-i>Back to Quask Studio</a> &middot; <a href="#top" id="top-link" data-i>Back to top</a></span></div></footer>
+<footer><div class="wrap"><span>© 2026 Quask Studio</span><span><a href="../" data-i>Back to Quask Studio</a> &middot; <a href="#top" id="top-link" data-i>Back to top</a></span></div></footer>
 
 <script>
 var EDITS=[
@@ -197,14 +197,14 @@ var LABELS={TikTok:"TikTok",Reels:"Instagram Reels",Shorts:"YouTube Shorts",Face
 var D={pl:{
 'Short-form edits | Quask Studio':'Krótkie formy wideo | Quask Studio','TikToks, Reels, Shorts, and Facebook Reels edited by Karol Vu at Quask Studio.':'TikToki, Reels, Shorts i Facebook Reels zmontowane przez Karola Vu w Quask Studio.',
 'Home':'Start','Edits':'Montaże','Contact':'Kontakt','Menu':'Menu','Close':'Zamknij','Short-form edits':'Krótkie formy wideo','My short-form edits':'Moje krótkie montaże',
-'TikToks, Reels, Shorts, and Facebook Reels I edited. Hover over a card to preview it, then click to watch the real video.':'TikToki, Reels, Shorts i Facebook Reels, które zmontowałem. Najedź na kartę, aby zobaczyć podgląd, i kliknij, aby obejrzeć prawdziwy film.',
+'TikToks, Reels, Shorts, and Facebook Reels I edited. Click a card to watch the real video.':'TikToki, Reels, Shorts i Facebook Reels, które zmontowałem. Kliknij kartę, aby obejrzeć prawdziwy film.',
 'See the edits':'Zobacz montaże','Say hello':'Napisz do mnie','Pick a platform to filter the list. Food content, barbers, and nails are my favourite things to edit.':'Wybierz platformę, aby przefiltrować listę. Najchętniej montuję treści o jedzeniu, barberów i paznokcie.',
 'All edits':'Wszystkie montaże','Made with CapCut and Adobe Premiere Pro':'Montaż w CapCut i Adobe Premiere Pro','Social Media Creator':'Twórca w mediach społecznościowych','Want a video like these?':'Chcesz taki film?','Send me a message and I’ll get back to you.':'Napisz do mnie, a odpowiem.',
 'Back to Quask Studio':'Wróć do Quask Studio','Back to top':'Do góry','edit':'montaż','edits2':'montaże','edits':'montaży','views':'wyświetleń','likes':'polubień'},
 vi:{
 'Short-form edits | Quask Studio':'Video ngắn | Quask Studio','TikToks, Reels, Shorts, and Facebook Reels edited by Karol Vu at Quask Studio.':'TikTok, Reels, Shorts và Facebook Reels do Karol Vu dựng tại Quask Studio.',
 'Home':'Trang chủ','Edits':'Bản dựng','Contact':'Liên hệ','Menu':'Menu','Close':'Đóng','Short-form edits':'Video ngắn','My short-form edits':'Video ngắn tôi đã dựng',
-'TikToks, Reels, Shorts, and Facebook Reels I edited. Hover over a card to preview it, then click to watch the real video.':'TikTok, Reels, Shorts và Facebook Reels do tôi dựng. Di chuột vào thẻ để xem trước, rồi nhấp để xem video thật.',
+'TikToks, Reels, Shorts, and Facebook Reels I edited. Click a card to watch the real video.':'TikTok, Reels, Shorts và Facebook Reels do tôi dựng. Nhấp vào thẻ để xem video thật.',
 'See the edits':'Xem các bản dựng','Say hello':'Nhắn tin cho tôi','Pick a platform to filter the list. Food content, barbers, and nails are my favourite things to edit.':'Chọn một nền tảng để lọc danh sách. Nội dung ẩm thực, tiệm cắt tóc và làm móng là những thứ tôi thích dựng nhất.',
 'All edits':'Tất cả bản dựng','Made with CapCut and Adobe Premiere Pro':'Dựng bằng CapCut và Adobe Premiere Pro','Social Media Creator':'Người sáng tạo nội dung mạng xã hội','Want a video like these?':'Bạn muốn một video như thế này?','Send me a message and I’ll get back to you.':'Hãy nhắn cho tôi, tôi sẽ trả lời bạn.',
 'Back to Quask Studio':'Quay lại Quask Studio','Back to top':'Lên đầu trang','edit':'bản dựng','edits2':'bản dựng','edits':'bản dựng','views':'lượt xem','likes':'lượt thích'}};
@@ -218,14 +218,14 @@ var T0=d.title,M=d.querySelector('meta[name=description]'),M0=M.content;
 function el(t,c,x){var n=d.createElement(t);if(c)n.className=c;if(x!==undefined)n.textContent=x;return n}
 function playClip(c,v){var p=v.play();if(p&&p.catch)p.catch(function(){});c.classList.add('playing')}
 function stopClip(c,v){v.pause();try{v.currentTime=0}catch(x){}c.classList.remove('playing')}
-var pio=null;if(touchOnly&&!reduce&&'IntersectionObserver' in window){pio=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target.querySelector('video');if(!v)return;if(en.isIntersecting)playClip(en.target,v);else stopClip(en.target,v)})},{threshold:.6})}
+var pio=null;if(!reduce&&'IntersectionObserver' in window){pio=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target.querySelector('video');if(!v)return;if(en.isIntersecting)playClip(en.target,v);else stopClip(en.target,v)})},{threshold:.4})}
 var rio=null,rcards=[];
 function attachClip(a,src,t){var v=d.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('aria-hidden','true');
 v.addEventListener('loadedmetadata',function(){a.classList.add('has-clip')});
 v.addEventListener('error',function(){v.remove();a.classList.remove('has-clip','playing')});
 v.src=src.indexOf('#')===-1?src+'#t=0.001':src;a.insertBefore(v,a.firstChild);
-a.addEventListener('mouseenter',function(){playClip(a,v)});a.addEventListener('mouseleave',function(){stopClip(a,v)});
-a.addEventListener('focus',function(){playClip(a,v)});a.addEventListener('blur',function(){stopClip(a,v)});if(pio)pio.observe(a)}
+if(pio)pio.observe(a);else{a.addEventListener('mouseenter',function(){playClip(a,v)});a.addEventListener('mouseleave',function(){stopClip(a,v)});
+a.addEventListener('focus',function(){playClip(a,v)});a.addEventListener('blur',function(){stopClip(a,v)});}}
 function render(f){cur=f;if(pio)pio.disconnect();if(rio)rio.disconnect();grid.replaceChildren();rcards=[];
 var list=EDITS.filter(function(e){return f==='all'||e.platform===f});
 countEl.textContent=list.length+' '+tr(pl(list.length));
