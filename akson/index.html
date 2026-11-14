@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
 <title>AKSON Auto Detailing – myjnia i autodetailing, Duchnice / Ożarów Mazowiecki</title>
 <meta name="description" content="Myjnia samochodowa i autodetailing w Duchnicach koło Ożarowa Mazowieckiego: pranie tapicerki, czyszczenie skór, polerowanie reflektorów.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +38,11 @@ nav a:hover{color:var(--bg)}
 a:focus-visible,input:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 .hero{position:relative;overflow:hidden;min-height:calc(100vh - 68px);min-height:calc(100svh - 68px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;padding:72px 0;background:var(--ink);color:var(--bg)}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,17,.94) 0%,rgba(17,17,17,.78) 48%,rgba(17,17,17,.3) 100%)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,17,.78) 0%,rgba(17,17,17,.5) 45%,rgba(17,17,17,.06) 100%)}
 .hero::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;z-index:1;background:linear-gradient(90deg,transparent,#19C3F2,transparent);animation:scan 2.2s 3.2s ease-out both;pointer-events:none}
 @keyframes scan{from{top:0;opacity:1}to{top:100%;opacity:0}}
-.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .wrap{position:relative;z-index:2;width:100%;text-shadow:0 2px 22px rgba(17,17,17,.55)}
+.hero .btn{text-shadow:none}
 .hero h1{font:600 clamp(36px,6vw,64px)/1.05 var(--head);margin:0 0 18px;max-width:13em;letter-spacing:-.015em}
 .hero p{color:rgba(248,249,250,.84);max-width:34em;margin:0 0 28px;font-size:18px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -89,6 +91,14 @@ footer{padding:26px 0;background:var(--ink);color:rgba(248,249,250,.7);font-size
 @keyframes pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
 @keyframes rise{to{opacity:1;transform:none}}
 @keyframes fill{to{transform:scaleX(1)}}
+html.js .hero .wrap>*{opacity:0;transform:translateY(26px)}
+html.ready .hero .wrap>*{opacity:1;transform:none;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+html.ready .hero .wrap>*:nth-child(2){transition-delay:.14s}
+html.ready .hero .wrap>*:nth-child(3){transition-delay:.28s}
+html.ready .hero.out .wrap>*{opacity:0;transform:translateY(26px);transition-delay:0s}
+html.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+html.js .rv.in{opacity:1;transform:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(max-width:760px){.svc{grid-template-columns:36px 1fr}.svc p{grid-column:2}header .wrap{padding:0 16px}.logo b{font-size:19px}.hr{gap:8px}
 header .btn{padding:10px 16px;font-size:15px}
 .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0 10px;background:none;border:0;color:var(--bg);cursor:pointer}
@@ -99,8 +109,8 @@ header .btn{padding:10px 16px;font-size:15px}
 nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 22px 18px;background:rgba(17,17,17,.98);border-bottom:1px solid rgba(248,249,250,.14);visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s}
 nav.open{visibility:visible;opacity:1;transform:none}
 nav a{padding:16px 0;font-size:19px;border-bottom:1px solid rgba(248,249,250,.1);color:var(--bg)}
-nav a:last-child{border-bottom:0}.ba{grid-template-columns:1fr}section{padding:64px 0}.shade{background:rgba(17,17,17,.76)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::after{animation:none;opacity:0}#intro{display:none}}
+nav a:last-child{border-bottom:0}.ba{grid-template-columns:1fr}section{padding:64px 0}.shade{background:rgba(17,17,17,.5)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::after{animation:none;opacity:0}#intro{display:none}html.js .rv,html.js .hero .wrap>*{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -180,7 +190,29 @@ n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
 document.addEventListener('click',function(e){if(!n.contains(e.target))set(false)});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
 window.addEventListener('resize',function(){if(innerWidth>760)set(false)});})();
-(function(){var i=document.getElementById('intro');if(!i)return;function rm(){if(i.parentNode)i.parentNode.removeChild(i)}i.addEventListener('click',rm);i.addEventListener('animationend',function(e){if(e.animationName==='iOut')rm()});})();
+(function(){var d=document.documentElement,i=document.getElementById('intro');function ready(){d.classList.add('ready')}
+function rm(){if(i&&i.parentNode)i.parentNode.removeChild(i);ready()}
+if(!i||(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)){ready()}else{i.addEventListener('click',rm);i.addEventListener('animationend',function(e){if(e.animationName==='iOut')rm()});setTimeout(ready,2900)}})();
+(function(){var red=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;if(red||!('IntersectionObserver' in window))return;
+var els=[].slice.call(document.querySelectorAll('h2,.lead,ul.pts,.svc,.cmp,.phone,.cgrid>div'));
+function hint(c){if(c._h||c._u)return;c._h=1;var r=c.querySelector('input'),t0=null,stop=false;if(!c._l){c._l=1;c.addEventListener('pointerdown',function(){c._u=1})}
+function f(ts){if(c._u){c._h=0;return}if(t0===null)t0=ts;var k=(ts-t0)/1800;if(k>=1){c.style.setProperty('--p',50);r.value=50;c._h=0;return}var v=50+22*Math.sin(k*Math.PI*2);c.style.setProperty('--p',v);r.value=v;requestAnimationFrame(f)}requestAnimationFrame(f)}
+els.forEach(function(e){e.classList.add('rv');if(e.matches('.svc,.cgrid>div')){e.style.transitionDelay=([].indexOf.call(e.parentNode.children,e)*0.08)+'s'}});
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');if(x.target.classList.contains('cmp'))hint(x.target)}else{x.target.classList.remove('in')}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});
+var hr=document.querySelector('.hero');if(hr){new IntersectionObserver(function(en){en.forEach(function(x){hr.classList.toggle('out',!x.isIntersecting)})},{threshold:.2}).observe(hr)}})();
+(function(){if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*<>/+';
+function rnd(){return CH.charAt(Math.floor(Math.random()*CH.length))}
+function prep(el){var o=el.textContent,a=document.createElement('span'),b=document.createElement('span'),s='',i;for(i=0;i<o.length;i++)s+=o.charAt(i)===' '?' ':rnd();a.className='sr';a.textContent=o;b.setAttribute('aria-hidden','true');b.textContent=s;el.textContent='';el.appendChild(a);el.appendChild(b);el._o=o;el._v=b}
+function run(el,delay,dur){if(!el||el._r)return;el._r=1;var tk=el._t=(el._t||0)+1;setTimeout(function(){if(el._t!==tk)return;var o=el._o,n=o.length,t0=null,fr=0;function f(ts){if(el._t!==tk)return;if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/dur),s='',i,c;fr++;if(fr%3&&k<1){requestAnimationFrame(f);return}for(i=0;i<n;i++){c=o.charAt(i);s+=(c===' '||k>=0.15+0.85*i/n)?c:rnd()}el._v.textContent=s;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)},delay)}
+function hide(el){el._t=(el._t||0)+1;el._r=0;var o=el._o,s='',i;for(i=0;i<o.length;i++)s+=o.charAt(i)===' '?' ':rnd();el._v.textContent=s}
+[].slice.call(document.querySelectorAll('.logo small,.in-sub,.cgrid h3,.tag,ul.pts b')).forEach(prep);
+run(document.querySelector('.in-sub'),1500,1000);
+var lg=document.querySelector('.logo small'),d=document.documentElement,mo;function chk(){if(d.classList.contains('ready')){if(mo)mo.disconnect();run(lg,250,900)}}
+mo=new MutationObserver(chk);mo.observe(d,{attributes:true,attributeFilter:['class']});chk();
+var rest=[].slice.call(document.querySelectorAll('.cgrid h3,.tag,ul.pts b'));
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){run(x.target,150+(x.target.matches('ul.pts b')?[].indexOf.call(x.target.parentNode.parentNode.children,x.target.parentNode)*260:0),800)}else{hide(x.target)}})},{threshold:.6});rest.forEach(function(e){io2.observe(e)})}else{rest.forEach(function(e){run(e,0,1)})}})();
 </script>
 </body>
 </html>
