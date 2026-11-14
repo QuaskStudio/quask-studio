@@ -98,6 +98,18 @@ html.ready .hero .wrap>*:nth-child(3){transition-delay:.28s}
 html.ready .hero.out .wrap>*{opacity:0;transform:translateY(26px);transition-delay:0s}
 html.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 html.js .rv.in{opacity:1;transform:none}
+.stats{background:var(--ink);color:var(--bg);padding:84px 0}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat{border-top:1px solid rgba(248,249,250,.22);padding-top:22px}
+.num{font:600 clamp(40px,5.6vw,68px)/1 var(--head);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.num b{font-weight:inherit}
+.num i{font-style:normal;color:var(--ac)}
+.stat p{margin:12px 0 0;color:rgba(248,249,250,.72);font-size:16px}
+.sico{width:56px;height:56px;border:1px solid rgba(248,249,250,.3);display:grid;place-items:center;margin-bottom:22px}
+.sico svg{width:28px;height:28px;stroke:var(--bg);fill:none;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter}
+@media(max-width:760px){.sgrid{grid-template-columns:1fr 1fr;gap:36px 22px}.stats{padding:64px 0}}
+.fbl{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.fbl svg{width:28px;height:28px;fill:currentColor;flex:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(max-width:760px){.svc{grid-template-columns:36px 1fr}.svc p{grid-column:2}header .wrap{padding:0 16px}.logo b{font-size:19px}.hr{gap:8px}
 header .btn{padding:10px 16px;font-size:15px}
@@ -160,13 +172,20 @@ nav a:last-child{border-bottom:0}.ba{grid-template-columns:1fr}section{padding:6
   </div>
 </div></section>
 
+<section class="stats" aria-label="Nasze liczby"><div class="wrap sgrid">
+  <div class="stat"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14l1.5-5a2 2 0 0 1 1.9-1.4h9.2a2 2 0 0 1 1.9 1.4L20 14M3 14h18v4H3zM7 18v2M17 18v2"/></svg></div><div class="num"><b class="cnt" data-to="4200">4200</b><i>+</i></div><p>obsłużonych samochodów</p></div>
+  <div class="stat"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM4 20a8 8 0 0 1 16 0"/></svg></div><div class="num"><b class="cnt" data-to="500">500</b><i>+</i></div><p>obsłużonych klientów</p></div>
+  <div class="stat"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6zM9 12l2 2 4-4"/></svg></div><div class="num"><b class="cnt" data-to="180">180</b><i>+</i></div><p>przeprowadzonych korekt lakieru</p></div>
+  <div class="stat"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h2a2 2 0 0 1 0 4h-2M4 21h14M9 3v3M12 3v3"/></svg></div><div class="num"><b class="cnt" data-to="2500">2500</b><i>+</i></div><p>zaparzonych kaw</p></div>
+</div></section>
+
 <section id="kontakt" class="contact"><div class="wrap">
   <h2>Umów wizytę</h2>
   <a class="phone" href="tel:+48500870810" data-copy="500 870 810">500 870 810</a>
   <div class="cgrid">
     <div><h3>Adres</h3><p>Ożarowska 28/30<br>05-850 Duchnice</p><p style="font-size:15px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=Ożarowska+28/30+Duchnice" rel="noopener">Otwórz w Mapach Google</a></p></div>
     <div><h3>E-mail</h3><p><a href="mailto:aksontrans@gmail.com?subject=Zapytanie%20o%20us%C5%82ug%C4%99" data-copy="aksontrans@gmail.com">aksontrans@gmail.com</a></p></div>
-    <div><h3>Aktualności</h3><p><a href="https://www.facebook.com/aksonautodetailing/" rel="noopener">Nasz profil na Facebooku</a></p></div>
+    <div><h3>Aktualności</h3><p><a class="fbl" href="https://www.facebook.com/aksonautodetailing/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.500 21v-8h2.700l.4-3.200h-3.100V7.800c0-.9.3-1.500 1.600-1.500h1.700V3.400c-.3 0-1.300-.2-2.400-.2-2.400 0-4 1.400-4 4.100v2.500H7.700V13h2.700v8h3.100Z"/></svg>Nasz profil na Facebooku</a></p></div>
   </div>
 </div></section>
 </main>
@@ -194,13 +213,20 @@ window.addEventListener('resize',function(){if(innerWidth>760)set(false)});})();
 function rm(){if(i&&i.parentNode)i.parentNode.removeChild(i);ready()}
 if(!i||(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)){ready()}else{i.addEventListener('click',rm);i.addEventListener('animationend',function(e){if(e.animationName==='iOut')rm()});setTimeout(ready,2900)}})();
 (function(){var red=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;if(red||!('IntersectionObserver' in window))return;
-var els=[].slice.call(document.querySelectorAll('h2,.lead,ul.pts,.svc,.cmp,.phone,.cgrid>div'));
+var els=[].slice.call(document.querySelectorAll('h2,.lead,ul.pts,.svc,.cmp,.phone,.cgrid>div,.stat'));
 function hint(c){if(c._h||c._u)return;c._h=1;var r=c.querySelector('input'),t0=null,stop=false;if(!c._l){c._l=1;c.addEventListener('pointerdown',function(){c._u=1})}
 function f(ts){if(c._u){c._h=0;return}if(t0===null)t0=ts;var k=(ts-t0)/1800;if(k>=1){c.style.setProperty('--p',50);r.value=50;c._h=0;return}var v=50+22*Math.sin(k*Math.PI*2);c.style.setProperty('--p',v);r.value=v;requestAnimationFrame(f)}requestAnimationFrame(f)}
-els.forEach(function(e){e.classList.add('rv');if(e.matches('.svc,.cgrid>div')){e.style.transitionDelay=([].indexOf.call(e.parentNode.children,e)*0.08)+'s'}});
+els.forEach(function(e){e.classList.add('rv');if(e.matches('.svc,.cgrid>div,.stat')){e.style.transitionDelay=([].indexOf.call(e.parentNode.children,e)*0.08)+'s'}});
 var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');if(x.target.classList.contains('cmp'))hint(x.target)}else{x.target.classList.remove('in')}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
 els.forEach(function(e){io.observe(e)});
 var hr=document.querySelector('.hero');if(hr){new IntersectionObserver(function(en){en.forEach(function(x){hr.classList.toggle('out',!x.isIntersecting)})},{threshold:.2}).observe(hr)}})();
+(function(){if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window))return;
+var nums=[].slice.call(document.querySelectorAll('.cnt'));
+function set(el,v){el.textContent=Math.round(v)}
+function go(el,delay){var to=+el.getAttribute('data-to'),tk=el._t=(el._t||0)+1;setTimeout(function(){if(el._t!==tk)return;var t0=null;function f(ts){if(el._t!==tk)return;if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/1800),e=1-Math.pow(1-k,3);set(el,to*e);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)},delay)}
+nums.forEach(function(n){set(n,0)});
+var io3=new IntersectionObserver(function(en){en.forEach(function(x){var el=x.target;if(x.isIntersecting){go(el,[].indexOf.call(el.parentNode.parentNode.parentNode.children,el.parentNode.parentNode)*120)}else{el._t=(el._t||0)+1;set(el,0)}})},{threshold:.5});
+nums.forEach(function(n){io3.observe(n)});})();
 (function(){if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)return;
 var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*<>/+';
 function rnd(){return CH.charAt(Math.floor(Math.random()*CH.length))}
